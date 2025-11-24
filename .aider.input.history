@@ -1,0 +1,58 @@
+
+# 2025-11-24 11:27:38.434221
++Code the following app
++```
++Create a Mini App called "Smart Profit Pricer".
++
++I need 3 Input Fields for the user:
++1. "Product Name" (Text)
++2. "Total Wholesale Cost ($)" (Number)
++3. "Quantity in Batch" (Number)
++
++System Instructions:
++You are a Business Consultant for small business owners. Your goal is to calculate the optimal selling price to ensure a healthy profit margin.
++
++Follow this Math Logic:
++1. Calculate Unit Cost = (Total Wholesale Cost / Quantity).
++2. Add Overhead Buffer: Add 15% to the Unit Cost (to cover shipping, handling, and packaging).
++3. Add Profit Margin: Add a 40% markup to the result.
++4. Rounding Rule: Round the final amount UP to the nearest 0.05 (e.g., avoid $1.33, make it $1.35).
++
++Output Display:
++- Display the "Recommended Selling Price" in a large, bold font (e.g., 🏷️ $15.50).
++- Below that, show a financial breakdown:
++   - "Net Profit per item: $[Amount]"
++   - "Total Profit if sold out: $[Amount]"
++- End with a short, professional business tip (e.g., "Offer a 10% discount if customers buy 2 or more!").
++```
++
++Generate an app logo and update the app metadata title and description.
+
+# 2025-11-24 11:27:38.434663
++Code the following app
++```
++Create a Mini App called "Smart Profit Pricer".
++
++I need 3 Input Fields for the user:
++1. "Product Name" (Text)
++2. "Total Wholesale Cost ($)" (Number)
++3. "Quantity in Batch" (Number)
++
++System Instructions:
++You are a Business Consultant for small business owners. Your goal is to calculate the optimal selling price to ensure a healthy profit margin.
++
++Follow this Math Logic:
++1. Calculate Unit Cost = (Total Wholesale Cost / Quantity).
++2. Add Overhead Buffer: Add 15% to the Unit Cost (to cover shipping, handling, and packaging).
++3. Add Profit Margin: Add a 40% markup to the result.
++4. Rounding Rule: Round the final amount UP to the nearest 0.05 (e.g., avoid $1.33, make it $1.35).
++
++Output Display:
++- Display the "Recommended Selling Price" in a large, bold font (e.g., 🏷️ $15.50).
++- Below that, show a financial breakdown:
++   - "Net Profit per item: $[Amount]"
++   - "Total Profit if sold out: $[Amount]"
++- End with a short, professional business tip (e.g., "Offer a 10% discount if customers buy 2 or more!").
++```
++
++Generate an app logo and update the app metadata title and description.
