@@ -1560,3 +1560,187 @@
 +  - Container Style: display: flex; gap: 10px; width: 100%;
 +  - Button 1: "🗑️ Delete" (Style: Red, flex: 1).
 +  - Button 2: "⬅️ Back to Dashboard" (Style: Grey, flex: 2).
+
+# 2025-11-25 15:10:20.051355
++Create a Mini App called "The Savage CFO: Text-Only Pro".
++
++STRICT UI RULES:
++1. DO NOT render any progress bars, visual bars, or graphs. Use only TEXT and COLORED BADGES.
++2. For Input Fields, you must render a Description Text Block *above* the input field, not inside it.
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "I am your business auditor. I will calculate your true ROI and roast your bad decisions. No charts, just hard numbers. Enter Company Name to begin."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Style: Wide, Black Background).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL REPORT CARD (Text Only)
++  *Display these 3 metrics in a Row (Flexbox), styled as Box Cards.*
++  1. Box 1: "Invested"
++     - Value: "$[Sum of Cost + Ads]"
++     - Subtitle: "Total Cash Out"
++  2. Box 2: "Potential Profit"
++     - Value: "$[Sum of Net Profit]"
++     - Subtitle: "Total Cash In"
++  3. Box 3: "Health Score"
++     - Value: "[Calculate: (TotalProfit/TotalRevenue)*100] / 100"
++     - Logic: If > 30 "A+", If > 10 "B", Else "F".
++     - Subtitle: "Grade"
++
++- SECTION B: PRODUCT ENTRY (Detailed Instructions)
++  *Render these exact elements in order:*
++
++  1. Label: "PRODUCT NAME" (Bold)
++  2. Description: "What is the name of the item you are selling?" (Small Grey Text)
++  3. Input Field: [productName]
++
++  4. Label: "UNIT COST ($)" (Bold)
++  5. Description: "How much does it cost to make or buy ONE item? (Materials + Labor)" (Small Grey Text)
++  6. Input Field: [cost]
++
++  7. Label: "AD SPEND PER ITEM ($)" (Bold)
++  8. Description: "Estimated advertising cost per sale (e.g. Facebook Ads cost)." (Small Grey Text)
++  9. Input Field: [adSpend]
++
++  10. Label: "SELLING PRICE ($)" (Bold)
++  11. Description: "The final price the customer pays you." (Small Grey Text)
++  12. Input Field: [price]
++
++  13. Label: "STOCK QUANTITY" (Bold)
++  14. Description: "How many units are sitting in your house right now?" (Small Grey Text)
++  15. Input Field: [qty]
++
++  - Button: "➕ Add Item to Inventory" (Style: Green, Large).
++
++- SECTION C: INVENTORY LIST
++  - Render 'inventory' array as Cards.
++  - Design: White Box with Border.
++  - Display: "[Product Name] (Stock: [Qty])"
++  - Status: If Profit > 0 show "✅ PROFITABLE" badge. Else show "⚠️ LOSS" badge.
++  - Action: Click to view details.
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Analysis: [selectedProduct.name]"
++
++- PART 1: THE BREAK-EVEN ANALYSIS (New Complexity)
++  - Formula: BreakEvenVolume = TotalInvested / (Price - Cost).
++  - Display Title: "⚖️ Survival Metric"
++  - Display Text: "You need to sell [BreakEvenVolume] units just to pay back your costs."
++  - Display Text: "After that, everything is pure profit."
++
++- PART 2: THE FINANCIAL GRID (Text Only)
++  *Render a 2x2 Grid. No Bars.*
++  - Box 1: "Total Cost" -> "$[Cost + AdSpend]"
++  - Box 2: "Real Profit" -> "$[Price - Cost - AdSpend]"
++  - Box 3: "Margin %" -> "[Margin]%"
++  - Box 4: "Max Safe Discount" -> "$[Price - (Cost+AdSpend)]" (Explanation: "You can lower price by this much").
++
++- PART 3: THE VERDICT
++  - If Profit < 0: "ROAST: You are losing money on every sale. Stop ads."
++  - Else: "VERDICT: Solid business. Keep scaling."
++
++- PART 4: ACTIONS
++  - Flex Row:
++    - Button: "🗑️ Delete" (Red)
++    - Button: "⬅️ Dashboard" (Grey)
+
+# 2025-11-25 15:10:20.052510
++Create a Mini App called "The Savage CFO: Text-Only Pro".
++
++STRICT UI RULES:
++1. DO NOT render any progress bars, visual bars, or graphs. Use only TEXT and COLORED BADGES.
++2. For Input Fields, you must render a Description Text Block *above* the input field, not inside it.
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "I am your business auditor. I will calculate your true ROI and roast your bad decisions. No charts, just hard numbers. Enter Company Name to begin."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Style: Wide, Black Background).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL REPORT CARD (Text Only)
++  *Display these 3 metrics in a Row (Flexbox), styled as Box Cards.*
++  1. Box 1: "Invested"
++     - Value: "$[Sum of Cost + Ads]"
++     - Subtitle: "Total Cash Out"
++  2. Box 2: "Potential Profit"
++     - Value: "$[Sum of Net Profit]"
++     - Subtitle: "Total Cash In"
++  3. Box 3: "Health Score"
++     - Value: "[Calculate: (TotalProfit/TotalRevenue)*100] / 100"
++     - Logic: If > 30 "A+", If > 10 "B", Else "F".
++     - Subtitle: "Grade"
++
++- SECTION B: PRODUCT ENTRY (Detailed Instructions)
++  *Render these exact elements in order:*
++
++  1. Label: "PRODUCT NAME" (Bold)
++  2. Description: "What is the name of the item you are selling?" (Small Grey Text)
++  3. Input Field: [productName]
++
++  4. Label: "UNIT COST ($)" (Bold)
++  5. Description: "How much does it cost to make or buy ONE item? (Materials + Labor)" (Small Grey Text)
++  6. Input Field: [cost]
++
++  7. Label: "AD SPEND PER ITEM ($)" (Bold)
++  8. Description: "Estimated advertising cost per sale (e.g. Facebook Ads cost)." (Small Grey Text)
++  9. Input Field: [adSpend]
++
++  10. Label: "SELLING PRICE ($)" (Bold)
++  11. Description: "The final price the customer pays you." (Small Grey Text)
++  12. Input Field: [price]
++
++  13. Label: "STOCK QUANTITY" (Bold)
++  14. Description: "How many units are sitting in your house right now?" (Small Grey Text)
++  15. Input Field: [qty]
++
++  - Button: "➕ Add Item to Inventory" (Style: Green, Large).
++
++- SECTION C: INVENTORY LIST
++  - Render 'inventory' array as Cards.
++  - Design: White Box with Border.
++  - Display: "[Product Name] (Stock: [Qty])"
++  - Status: If Profit > 0 show "✅ PROFITABLE" badge. Else show "⚠️ LOSS" badge.
++  - Action: Click to view details.
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Analysis: [selectedProduct.name]"
++
++- PART 1: THE BREAK-EVEN ANALYSIS (New Complexity)
++  - Formula: BreakEvenVolume = TotalInvested / (Price - Cost).
++  - Display Title: "⚖️ Survival Metric"
++  - Display Text: "You need to sell [BreakEvenVolume] units just to pay back your costs."
++  - Display Text: "After that, everything is pure profit."
++
++- PART 2: THE FINANCIAL GRID (Text Only)
++  *Render a 2x2 Grid. No Bars.*
++  - Box 1: "Total Cost" -> "$[Cost + AdSpend]"
++  - Box 2: "Real Profit" -> "$[Price - Cost - AdSpend]"
++  - Box 3: "Margin %" -> "[Margin]%"
++  - Box 4: "Max Safe Discount" -> "$[Price - (Cost+AdSpend)]" (Explanation: "You can lower price by this much").
++
++- PART 3: THE VERDICT
++  - If Profit < 0: "ROAST: You are losing money on every sale. Stop ads."
++  - Else: "VERDICT: Solid business. Keep scaling."
++
++- PART 4: ACTIONS
++  - Flex Row:
++    - Button: "🗑️ Delete" (Red)
++    - Button: "⬅️ Dashboard" (Grey)
