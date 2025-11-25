@@ -668,3 +668,123 @@
 +- NAVIGATION:
 +  - Button: "🗑️ Delete Item" (Red).
 +  - Button: "⬅️ Back to Dashboard" (Grey).
+
+# 2025-11-25 13:24:30.549730
++Create a Mini App called "The Savage CFO: Ultimate Hybrid".
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "Welcome, Entrepreneur. I am here to audit your business. I will analyze your inventory, calculate your true margins, and roast your bad decisions. Enter your company name to begin the audit."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL INTELLIGENCE (Numbers + Graphs)
++  - Display "Total Invested Capital: $[Sum of Cost * Stock]"
++  - Display "Potential Revenue: $[Sum of Price * Stock]"
++  - Display "Company Efficiency Score:"
++  - Render a VISUAL BAR: A grey container with a Green Bar inside. Width % = Global Margin %.
++
++- SECTION B: PRODUCT ENTRY
++  - Inputs: "Product Name", "Cost ($)", "Price ($)", "Stock Qty", "Monthly Sales".
++  - Button: "➕ Add Item" (Style: Green).
++
++- SECTION C: INVENTORY LIST
++  - Instruction: "Tap a card below to view full Case File."
++  - Render the 'inventory' array as styled CARDS.
++  - Card Design:
++    - Left: "[Product Name]" (Bold).
++    - Right: A STATUS BADGE. (If Margin < 20%: "🔥 ROAST ME". Else: "✅ GOOD").
++    - Bottom: Small text showing "Stock: [Qty] | Net Profit: $[Price - Cost]"
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Case File: [selectedProduct.name]"
++
++- PART 1: VISUAL ANALYSIS (Graphs)
++  - "Profit Margin ([Margin]%)": Render a Blue Visual Bar representing the % (width).
++  - "Stock Health ([Stock/Sales] Months)": Render a Yellow Visual Bar representing duration.
++
++- PART 2: THE HARD NUMBERS (Grid Display)
++  - Display a 2x2 Grid of detailed stats:
++    1. "Unit Cost: $[Cost]"
++    2. "Selling Price: $[Price]"
++    3. "Net Profit Per Item: $[Price - Cost]"
++    4. "Break-Even Price: $[Cost * 1.15]"
++
++- PART 3: THE VERDICT (Personality)
++  - If Margin < 20%: "ROAST: You are running a charity. Raise your price immediately."
++  - If Stock/Sales > 6: "ROAST: Cash flow nightmare. You are hoarding stock."
++  - Else: "PASSED: This product is actually making money. Good job."
++
++- NAVIGATION
++  - Button 1: "🗑️ Delete Item" (Style: Red, Small).
++  - Button 2: "⬅️ BACK TO DASHBOARD" (Style: Grey, Full Width, Large Text).
++  - Action for Button 2: Set `currentView` to 'dashboard'.
+
+# 2025-11-25 13:24:30.550304
++Create a Mini App called "The Savage CFO: Ultimate Hybrid".
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "Welcome, Entrepreneur. I am here to audit your business. I will analyze your inventory, calculate your true margins, and roast your bad decisions. Enter your company name to begin the audit."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL INTELLIGENCE (Numbers + Graphs)
++  - Display "Total Invested Capital: $[Sum of Cost * Stock]"
++  - Display "Potential Revenue: $[Sum of Price * Stock]"
++  - Display "Company Efficiency Score:"
++  - Render a VISUAL BAR: A grey container with a Green Bar inside. Width % = Global Margin %.
++
++- SECTION B: PRODUCT ENTRY
++  - Inputs: "Product Name", "Cost ($)", "Price ($)", "Stock Qty", "Monthly Sales".
++  - Button: "➕ Add Item" (Style: Green).
++
++- SECTION C: INVENTORY LIST
++  - Instruction: "Tap a card below to view full Case File."
++  - Render the 'inventory' array as styled CARDS.
++  - Card Design:
++    - Left: "[Product Name]" (Bold).
++    - Right: A STATUS BADGE. (If Margin < 20%: "🔥 ROAST ME". Else: "✅ GOOD").
++    - Bottom: Small text showing "Stock: [Qty] | Net Profit: $[Price - Cost]"
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Case File: [selectedProduct.name]"
++
++- PART 1: VISUAL ANALYSIS (Graphs)
++  - "Profit Margin ([Margin]%)": Render a Blue Visual Bar representing the % (width).
++  - "Stock Health ([Stock/Sales] Months)": Render a Yellow Visual Bar representing duration.
++
++- PART 2: THE HARD NUMBERS (Grid Display)
++  - Display a 2x2 Grid of detailed stats:
++    1. "Unit Cost: $[Cost]"
++    2. "Selling Price: $[Price]"
++    3. "Net Profit Per Item: $[Price - Cost]"
++    4. "Break-Even Price: $[Cost * 1.15]"
++
++- PART 3: THE VERDICT (Personality)
++  - If Margin < 20%: "ROAST: You are running a charity. Raise your price immediately."
++  - If Stock/Sales > 6: "ROAST: Cash flow nightmare. You are hoarding stock."
++  - Else: "PASSED: This product is actually making money. Good job."
++
++- NAVIGATION
++  - Button 1: "🗑️ Delete Item" (Style: Red, Small).
++  - Button 2: "⬅️ BACK TO DASHBOARD" (Style: Grey, Full Width, Large Text).
++  - Action for Button 2: Set `currentView` to 'dashboard'.
