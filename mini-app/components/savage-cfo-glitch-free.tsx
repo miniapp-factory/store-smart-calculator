@@ -303,7 +303,7 @@ export default function SavageCfoGlitchFree() {
                   >
                     <CardContent className="flex justify-between items-center">
                       <span className="font-semibold">{item.productName}</span>
-                      <Badge variant={roi < 100 ? "destructive" : "success"}>
+                      <Badge>
                         {roi < 100 ? "⚠️ RISKY" : "🚀 SCALABLE"}
                       </Badge>
                     </CardContent>
