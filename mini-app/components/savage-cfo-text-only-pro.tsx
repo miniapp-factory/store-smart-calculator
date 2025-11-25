@@ -132,7 +132,7 @@ export default function SavageCfoTextOnlyPro() {
           <h3 className="font-medium">Health Score</h3>
           <p className="text-2xl font-bold">{globalEfficiency.toFixed(1)}%</p>
           <p className="text-sm text-muted-foreground">Grade</p>
-          <Badge variant={grade === "A+" ? "success" : grade === "B" ? "warning" : "destructive"} className="mt-2">
+          <Badge className={`mt-2 ${grade === "A+" ? "bg-green-500 text-white" : grade === "B" ? "bg-yellow-500 text-white" : "bg-red-500 text-white"}`}>
             {grade}
           </Badge>
         </Card>
