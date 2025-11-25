@@ -788,3 +788,139 @@
 +  - Button 1: "🗑️ Delete Item" (Style: Red, Small).
 +  - Button 2: "⬅️ BACK TO DASHBOARD" (Style: Grey, Full Width, Large Text).
 +  - Action for Button 2: Set `currentView` to 'dashboard'.
+
+# 2025-11-25 13:38:17.342104
++Create a Mini App called "The Savage CFO: Enterprise PRO".
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "The ultimate tool for starting and managing a business. I will audit your inventory, factor in your marketing costs, and determine if your business is scalable or just a hobby. Enter your company name to begin."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL INTELLIGENCE
++  - Display "Total Invested Capital: $[Sum of (Cost + AdCost) * Stock]"
++  - Display "Potential Net Profit: $[Sum of (Price - Cost - AdCost) * Stock]"
++  - Display "Business Scalability Score:"
++  - Render a VISUAL BAR: Grey container with a Blue Bar inside. Width % = (Total Profit / Total Revenue) * 100.
++
++- SECTION B: ADVANCED PRODUCT ENTRY (The Complexity)
++  - Inputs:
++    1. "Product Name"
++    2. "Making/Buying Cost ($)"
++    3. "Marketing/Ad Spend per Item ($)"  <-- NEW COMPLEXITY
++    4. "Selling Price ($)"
++    5. "Stock Qty"
++    6. "Monthly Sales"
++  - Button: "➕ Add Item" (Style: Green).
++
++- SECTION C: INVENTORY LIST
++  - Instruction: "Tap a card below to view the ROI Report."
++  - Render 'inventory' array as styled CARDS.
++  - Card Design:
++    - Left: "[Product Name]" (Bold).
++    - Right: STATUS BADGE. (If ROI < 100%: "⚠️ RISKY". Else: "🚀 SCALABLE").
++    - Bottom: "Stock: [Qty]"
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Analysis: [selectedProduct.name]"
++
++- PART 1: THE ALGORITHM (Visual Bars)
++  - "Gross Margin": Blue Bar (Width = % of Price that is profit).
++  - "Marketing Intensity": Red Bar (Width = (AdSpend / Price) * 100).
++  - "ROI (Return on Investment)": Green Bar (Width = NetProfit / TotalCost * 100).
++
++- PART 2: THE HARD NUMBERS (2x2 Grid)
++  1. "Total Cost (Item + Ads): $[Cost + AdSpend]"
++  2. "Selling Price: $[Price]"
++  3. "Real Net Profit: $[Price - Cost - AdSpend]"
++  4. "Break-Even Price: $[Cost + AdSpend]"
++
++- PART 3: THE VERDICT (Personality)
++  - Logic:
++    - If (Price - Cost - AdSpend) < 0: "ROAST: You are losing money on every sale. Stop ads immediately."
++    - If AdSpend > Profit: "ROAST: You are working just to pay Mark Zuckerberg. Fix your ads."
++    - Else: "VERDICT: This is a money-printing machine. Scale it up!"
++
++- PART 4: ACTIONS (UI FIX)
++  - Render a Flex Row container (display: flex; gap: 10px;).
++  - Inside it:
++    - Button 1: "🗑️ Delete" (Style: Red, flex: 1).
++    - Button 2: "⬅️ Back to Dashboard" (Style: Grey, flex: 2).
+
+# 2025-11-25 13:38:17.343030
++Create a Mini App called "The Savage CFO: Enterprise PRO".
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "The ultimate tool for starting and managing a business. I will audit your inventory, factor in your marketing costs, and determine if your business is scalable or just a hobby. Enter your company name to begin."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL INTELLIGENCE
++  - Display "Total Invested Capital: $[Sum of (Cost + AdCost) * Stock]"
++  - Display "Potential Net Profit: $[Sum of (Price - Cost - AdCost) * Stock]"
++  - Display "Business Scalability Score:"
++  - Render a VISUAL BAR: Grey container with a Blue Bar inside. Width % = (Total Profit / Total Revenue) * 100.
++
++- SECTION B: ADVANCED PRODUCT ENTRY (The Complexity)
++  - Inputs:
++    1. "Product Name"
++    2. "Making/Buying Cost ($)"
++    3. "Marketing/Ad Spend per Item ($)"  <-- NEW COMPLEXITY
++    4. "Selling Price ($)"
++    5. "Stock Qty"
++    6. "Monthly Sales"
++  - Button: "➕ Add Item" (Style: Green).
++
++- SECTION C: INVENTORY LIST
++  - Instruction: "Tap a card below to view the ROI Report."
++  - Render 'inventory' array as styled CARDS.
++  - Card Design:
++    - Left: "[Product Name]" (Bold).
++    - Right: STATUS BADGE. (If ROI < 100%: "⚠️ RISKY". Else: "🚀 SCALABLE").
++    - Bottom: "Stock: [Qty]"
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Analysis: [selectedProduct.name]"
++
++- PART 1: THE ALGORITHM (Visual Bars)
++  - "Gross Margin": Blue Bar (Width = % of Price that is profit).
++  - "Marketing Intensity": Red Bar (Width = (AdSpend / Price) * 100).
++  - "ROI (Return on Investment)": Green Bar (Width = NetProfit / TotalCost * 100).
++
++- PART 2: THE HARD NUMBERS (2x2 Grid)
++  1. "Total Cost (Item + Ads): $[Cost + AdSpend]"
++  2. "Selling Price: $[Price]"
++  3. "Real Net Profit: $[Price - Cost - AdSpend]"
++  4. "Break-Even Price: $[Cost + AdSpend]"
++
++- PART 3: THE VERDICT (Personality)
++  - Logic:
++    - If (Price - Cost - AdSpend) < 0: "ROAST: You are losing money on every sale. Stop ads immediately."
++    - If AdSpend > Profit: "ROAST: You are working just to pay Mark Zuckerberg. Fix your ads."
++    - Else: "VERDICT: This is a money-printing machine. Scale it up!"
++
++- PART 4: ACTIONS (UI FIX)
++  - Render a Flex Row container (display: flex; gap: 10px;).
++  - Inside it:
++    - Button 1: "🗑️ Delete" (Style: Red, flex: 1).
++    - Button 2: "⬅️ Back to Dashboard" (Style: Grey, flex: 2).
