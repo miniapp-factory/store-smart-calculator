@@ -452,3 +452,109 @@
 +- Use emojis.
 +- Keep the language punchy and sarcastic.
 +- Make the buttons distinct colors (e.g., 'Delete' should be red).
+
+# 2025-11-25 12:53:09.640846
++Create a Mini App called "The Savage CFO: UX Remastered".
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "I am here to audit your business. Enter your company name to begin."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Make this button wide and black).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: THE GLOBAL STATS PANEL (Summary of All Products)
++  *Calculate and display these 3 numbers in a row:*
++  1. "Total Invested Capital": $[Sum of (Cost * Stock) for all items]
++  2. "Total Potential Profit": $[Sum of ((Price - Cost) * Stock) for all items]
++  3. "Portfolio Health": [If Profit > Investment: "✅ Green", Else: "🔻 Red"]
++
++- SECTION B: FAST ADD
++  - Inputs: "Product Name", "Cost ($)", "Price ($)", "Stock Qty", "Monthly Sales".
++  - Button: "➕ Add Item to Inventory" (Make this button Green).
++
++- SECTION C: INVENTORY LIST (The Fix)
++  - Instruction: "Tap a product below to open its file."
++  - Render the 'inventory' array as a list of **CLICKABLE CARDS**.
++  - Style for each card:
++    - Display: "[Product Name] (Qty: [Stock])" on the left.
++    - Display: "View Stats 👉" on the right.
++    - Add a visible border or background color to show it is clickable.
++  - Action: On Click -> Switch to 'detail' view.
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Case File: [selectedProduct.name]"
++
++- THE METRICS GRID (2x2 Grid):
++  - "Unit Margin": [((Price - Cost)/Price)*100]%
++  - "Break-Even Point": $[Cost * 1.15]
++  - "Stock Duration": [Stock/MonthlySales] Months
++  - "Total Asset Value": $[Cost * Stock]
++
++- THE JUDGEMENT (Personality):
++  - Logic: If Margin < 20% OR StockDuration > 6, display a "ROAST" message (e.g., "Why do you hate money?"). Else, display "PASSED".
++
++- NAVIGATION:
++  - Button: "🗑️ Delete Item" (Red button).
++  - Button: "⬅️ Back to Dashboard" (Grey button, full width).
+
+# 2025-11-25 12:53:09.641354
++Create a Mini App called "The Savage CFO: UX Remastered".
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "I am here to audit your business. Enter your company name to begin."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Make this button wide and black).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: THE GLOBAL STATS PANEL (Summary of All Products)
++  *Calculate and display these 3 numbers in a row:*
++  1. "Total Invested Capital": $[Sum of (Cost * Stock) for all items]
++  2. "Total Potential Profit": $[Sum of ((Price - Cost) * Stock) for all items]
++  3. "Portfolio Health": [If Profit > Investment: "✅ Green", Else: "🔻 Red"]
++
++- SECTION B: FAST ADD
++  - Inputs: "Product Name", "Cost ($)", "Price ($)", "Stock Qty", "Monthly Sales".
++  - Button: "➕ Add Item to Inventory" (Make this button Green).
++
++- SECTION C: INVENTORY LIST (The Fix)
++  - Instruction: "Tap a product below to open its file."
++  - Render the 'inventory' array as a list of **CLICKABLE CARDS**.
++  - Style for each card:
++    - Display: "[Product Name] (Qty: [Stock])" on the left.
++    - Display: "View Stats 👉" on the right.
++    - Add a visible border or background color to show it is clickable.
++  - Action: On Click -> Switch to 'detail' view.
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Case File: [selectedProduct.name]"
++
++- THE METRICS GRID (2x2 Grid):
++  - "Unit Margin": [((Price - Cost)/Price)*100]%
++  - "Break-Even Point": $[Cost * 1.15]
++  - "Stock Duration": [Stock/MonthlySales] Months
++  - "Total Asset Value": $[Cost * Stock]
++
++- THE JUDGEMENT (Personality):
++  - Logic: If Margin < 20% OR StockDuration > 6, display a "ROAST" message (e.g., "Why do you hate money?"). Else, display "PASSED".
++
++- NAVIGATION:
++  - Button: "🗑️ Delete Item" (Red button).
++  - Button: "⬅️ Back to Dashboard" (Grey button, full width).
