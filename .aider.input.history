@@ -1082,3 +1082,161 @@
 +  - Container Style: display: flex; gap: 10px; width: 100%;
 +  - Button 1: "🗑️ Delete" (Style: Red, flex: 1).
 +  - Button 2: "⬅️ Back to Dashboard" (Style: Grey, flex: 2).
+
+# 2025-11-25 14:17:30.891290
++Create a Mini App called "The Savage CFO: Glitch-Free Edition".
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "The ultimate tool for starting and managing a business. I will audit your inventory, calculate your true costs (including ads), and explain complex business math in simple terms. Enter your company name to begin."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL INTELLIGENCE
++  - Display "Total Invested Capital: $[Sum of (Cost + AdCost) * Stock]"
++  - Display "Potential Net Profit: $[Sum of (Price - Cost - AdCost) * Stock]"
++  - Display "Business Efficiency Score:"
++  - RENDER VISUAL BAR (Fixed):
++    - Create a Grey Container (Width: 100%, Height: 10px, Rounded, Overflow: Hidden).
++    - Inside, create a Blue Bar. Width % = Math.min((TotalProfit / TotalRevenue * 100), 100).
++  - Subtitle: "This score shows if your business is healthy."
++
++- SECTION B: ADVANCED PRODUCT ENTRY
++  - Inputs:
++    1. "Product Name"
++    2. "Making/Buying Cost ($)"
++    3. "Ad Spend per Item ($)"
++    4. "Selling Price ($)"
++    5. "Stock Qty"
++    6. "Monthly Sales"
++  - Button: "➕ Add Item" (Style: Green).
++
++- SECTION C: INVENTORY LIST
++  - Instruction: "Tap a card below to view the ROI Report."
++  - Render 'inventory' array as styled CARDS.
++  - Card Design:
++    - Left: "[Product Name]" (Bold).
++    - Right: STATUS BADGE. (If ROI < 100%: "⚠️ RISKY". Else: "🚀 SCALABLE").
++    - Bottom: "Stock: [Qty] | Net Profit: $[Price - Cost - AdSpend]"
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Analysis: [selectedProduct.name]"
++
++- PART 1: VISUAL ANALYSIS (Text Above Bars)
++  *render each metric in this format:*
++  1. Label: "Gross Margin ([Margin]%)"
++     - Subtitle: "How much of the price is actually profit."
++     - Bar: Blue (Width = Math.min(Margin, 100)%).
++  2. Label: "Marketing Impact ([AdSpend/Price*100]%)"
++     - Subtitle: "How much of the price goes to Mark Zuckerberg."
++     - Bar: Red (Width = Math.min((AdSpend/Price*100), 100)%).
++  3. Label: "ROI ([NetProfit/TotalCost*100]%)"
++     - Subtitle: "For every $1 you spend, you get this much back."
++     - Bar: Green (Width = Math.min((NetProfit/TotalCost*100), 100)%).
++
++- PART 2: THE HARD NUMBERS (2x2 Grid with Explanations)
++  - Box 1: "Total Cost: $[Cost + AdSpend]"
++    - (Small text: "Item Cost + Ads")
++  - Box 2: "Selling Price: $[Price]"
++    - (Small text: "What customer pays")
++  - Box 3: "Real Net Profit: $[Price - Cost - AdSpend]"
++    - (Small text: "Cash in your pocket")
++  - Box 4: "Break-Even Price: $[Cost + AdSpend]"
++    - (Small text: "Minimum price to not lose money")
++
++- PART 3: THE VERDICT
++  - If (Price - Cost - AdSpend) < 0: "ROAST: You are losing money on every sale! Stop ads immediately."
++  - Else: "VERDICT: This is a scalable product. Good job."
++
++- PART 4: ACTIONS (Fixed Flex Layout)
++  - Container Style: display: flex; gap: 10px; width: 100%;
++  - Button 1: "🗑️ Delete" (Style: Red, flex: 1).
++  - Button 2: "⬅️ Back to Dashboard" (Style: Grey, flex: 2).
+
+# 2025-11-25 14:17:30.892782
++Create a Mini App called "The Savage CFO: Glitch-Free Edition".
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "The ultimate tool for starting and managing a business. I will audit your inventory, calculate your true costs (including ads), and explain complex business math in simple terms. Enter your company name to begin."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL INTELLIGENCE
++  - Display "Total Invested Capital: $[Sum of (Cost + AdCost) * Stock]"
++  - Display "Potential Net Profit: $[Sum of (Price - Cost - AdCost) * Stock]"
++  - Display "Business Efficiency Score:"
++  - RENDER VISUAL BAR (Fixed):
++    - Create a Grey Container (Width: 100%, Height: 10px, Rounded, Overflow: Hidden).
++    - Inside, create a Blue Bar. Width % = Math.min((TotalProfit / TotalRevenue * 100), 100).
++  - Subtitle: "This score shows if your business is healthy."
++
++- SECTION B: ADVANCED PRODUCT ENTRY
++  - Inputs:
++    1. "Product Name"
++    2. "Making/Buying Cost ($)"
++    3. "Ad Spend per Item ($)"
++    4. "Selling Price ($)"
++    5. "Stock Qty"
++    6. "Monthly Sales"
++  - Button: "➕ Add Item" (Style: Green).
++
++- SECTION C: INVENTORY LIST
++  - Instruction: "Tap a card below to view the ROI Report."
++  - Render 'inventory' array as styled CARDS.
++  - Card Design:
++    - Left: "[Product Name]" (Bold).
++    - Right: STATUS BADGE. (If ROI < 100%: "⚠️ RISKY". Else: "🚀 SCALABLE").
++    - Bottom: "Stock: [Qty] | Net Profit: $[Price - Cost - AdSpend]"
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Analysis: [selectedProduct.name]"
++
++- PART 1: VISUAL ANALYSIS (Text Above Bars)
++  *render each metric in this format:*
++  1. Label: "Gross Margin ([Margin]%)"
++     - Subtitle: "How much of the price is actually profit."
++     - Bar: Blue (Width = Math.min(Margin, 100)%).
++  2. Label: "Marketing Impact ([AdSpend/Price*100]%)"
++     - Subtitle: "How much of the price goes to Mark Zuckerberg."
++     - Bar: Red (Width = Math.min((AdSpend/Price*100), 100)%).
++  3. Label: "ROI ([NetProfit/TotalCost*100]%)"
++     - Subtitle: "For every $1 you spend, you get this much back."
++     - Bar: Green (Width = Math.min((NetProfit/TotalCost*100), 100)%).
++
++- PART 2: THE HARD NUMBERS (2x2 Grid with Explanations)
++  - Box 1: "Total Cost: $[Cost + AdSpend]"
++    - (Small text: "Item Cost + Ads")
++  - Box 2: "Selling Price: $[Price]"
++    - (Small text: "What customer pays")
++  - Box 3: "Real Net Profit: $[Price - Cost - AdSpend]"
++    - (Small text: "Cash in your pocket")
++  - Box 4: "Break-Even Price: $[Cost + AdSpend]"
++    - (Small text: "Minimum price to not lose money")
++
++- PART 3: THE VERDICT
++  - If (Price - Cost - AdSpend) < 0: "ROAST: You are losing money on every sale! Stop ads immediately."
++  - Else: "VERDICT: This is a scalable product. Good job."
++
++- PART 4: ACTIONS (Fixed Flex Layout)
++  - Container Style: display: flex; gap: 10px; width: 100%;
++  - Button 1: "🗑️ Delete" (Style: Red, flex: 1).
++  - Button 2: "⬅️ Back to Dashboard" (Style: Grey, flex: 2).
