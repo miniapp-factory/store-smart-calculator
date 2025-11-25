@@ -272,3 +272,85 @@
 +5. 💾 JSON EXPORT (The Technical Part):
 +   - Generate a code block representing this product as a Javascript Object/Array so the user can see the "Code" behind their business.
 +   - Example format: { "sku": "[Name]", "qty": [Stock], "value": [Total Value] }
+
+# 2025-11-25 12:18:05.338634
++Create a sophisticated Mini App called "The Savage CFO: Enterprise ERP".
++
++State Management Requirements:
++1. Create a variable to store "Company Name".
++2. Create an empty Array called "InventoryList" to store products.
++3. Create a state for "Current View" (Start Menu vs Dashboard).
++
++--- VIEW 1: THE START MENU ---
++- Display a big title: "💼 The Savage CFO Enterprise Edition"
++- Input Field: "Enter Company Name"
++- Button: "Hire CFO & Begin"
++- Action: When clicked, save the name and switch to View 2.
++
++--- VIEW 2: THE DASHBOARD ---
++- Header: Display "[Company Name] HQ" with a "Total Inventory Value: $[Sum of all costs]" counter.
++
++- SECTION A: Product Entry (Inputs)
++  1. "Product Name" (Text)
++  2. "Cost ($)" (Number)
++  3. "Price ($)" (Number)
++  4. "Stock Qty" (Number)
++  5. "Monthly Sales" (Number)
++  - Button: "Add to Inventory" (Action: Add this object to 'InventoryList' array, clear inputs, and update the table).
++
++- SECTION B: The Inventory Table
++  - Display the 'InventoryList' array as a neat table showing: Name | Margin % | Stock Duration (Months) | Status.
++  - Status Logic:
++    - If (Stock / Monthly Sales) > 6: Show "💀 Dead Stock"
++    - If Margin < 20%: Show "💸 Charity"
++    - Else: Show "✅ Healthy"
++
++- SECTION C: The "Savage Algorithm" (The Audit)
++  - Create a "Generate Company Report" button. When clicked, run this scoring algorithm:
++    1. Start Score = 100.
++    2. Subtract 10 points for every "Dead Stock" item.
++    3. Subtract 15 points for every "Charity" margin item.
++    4. Add 5 points for every item with Margin > 50%.
++  - Display the "Bankruptcy Score" out of 100.
++  - Display a "CFO Verdict" based on the score (e.g., If < 50: "I'm calling the liquidators. You are finished.").
+
+# 2025-11-25 12:18:05.339142
++Create a sophisticated Mini App called "The Savage CFO: Enterprise ERP".
++
++State Management Requirements:
++1. Create a variable to store "Company Name".
++2. Create an empty Array called "InventoryList" to store products.
++3. Create a state for "Current View" (Start Menu vs Dashboard).
++
++--- VIEW 1: THE START MENU ---
++- Display a big title: "💼 The Savage CFO Enterprise Edition"
++- Input Field: "Enter Company Name"
++- Button: "Hire CFO & Begin"
++- Action: When clicked, save the name and switch to View 2.
++
++--- VIEW 2: THE DASHBOARD ---
++- Header: Display "[Company Name] HQ" with a "Total Inventory Value: $[Sum of all costs]" counter.
++
++- SECTION A: Product Entry (Inputs)
++  1. "Product Name" (Text)
++  2. "Cost ($)" (Number)
++  3. "Price ($)" (Number)
++  4. "Stock Qty" (Number)
++  5. "Monthly Sales" (Number)
++  - Button: "Add to Inventory" (Action: Add this object to 'InventoryList' array, clear inputs, and update the table).
++
++- SECTION B: The Inventory Table
++  - Display the 'InventoryList' array as a neat table showing: Name | Margin % | Stock Duration (Months) | Status.
++  - Status Logic:
++    - If (Stock / Monthly Sales) > 6: Show "💀 Dead Stock"
++    - If Margin < 20%: Show "💸 Charity"
++    - Else: Show "✅ Healthy"
++
++- SECTION C: The "Savage Algorithm" (The Audit)
++  - Create a "Generate Company Report" button. When clicked, run this scoring algorithm:
++    1. Start Score = 100.
++    2. Subtract 10 points for every "Dead Stock" item.
++    3. Subtract 15 points for every "Charity" margin item.
++    4. Add 5 points for every item with Margin > 50%.
++  - Display the "Bankruptcy Score" out of 100.
++  - Display a "CFO Verdict" based on the score (e.g., If < 50: "I'm calling the liquidators. You are finished.").
