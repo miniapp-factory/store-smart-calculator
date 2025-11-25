@@ -558,3 +558,113 @@
 +- NAVIGATION:
 +  - Button: "🗑️ Delete Item" (Red button).
 +  - Button: "⬅️ Back to Dashboard" (Grey button, full width).
+
+# 2025-11-25 13:08:03.083204
++Create a Mini App called "The Savage CFO: Visual Edition".
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "I am here to audit your business. Enter your company name to begin."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL HEALTH (The Lightweight Graph)
++  - Calculate "Global Margin" = (Total Profit / Total Revenue) * 100.
++  - Display "Company Health Score:"
++  - Render a VISUAL BAR: A long grey container with a Green Bar inside. The width of the Green Bar % should match the Global Margin %.
++  - Label: "[Global Margin]% Efficiency"
++
++- SECTION B: FAST ADD
++  - Inputs: "Product Name", "Cost ($)", "Price ($)", "Stock Qty", "Monthly Sales".
++  - Button: "➕ Add Item" (Style: Green).
++
++- SECTION C: INVENTORY LIST (UI Fixed)
++  - Instruction: "Tap any card to see full report."
++  - Render the 'inventory' array as a list of styled CARDS.
++  - CARD DESIGN (Important):
++    - Background: White. Border-radius: 8px. Shadow: Soft. Margin-bottom: 10px. Padding: 15px.
++    - TOP ROW: Display "[Product Name]" (Bold) on the left.
++    - RIGHT SIDE: Display a STATUS BADGE.
++      - Logic: If Margin < 20% OR (Stock/Sales) > 6: Show Badge "🔥 ROAST ME" (Red Background, White Text).
++      - Else: Show Badge "✅ GOOD" (Green Background, White Text).
++    - BOTTOM ROW: Display "Stock: [Qty] | Margin: [Margin]%" in small grey text.
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Case File: [selectedProduct.name]"
++
++- THE VISUAL METRICS (Graphs):
++  - "Profit Margin": Render a horizontal colored bar (Width = Margin %).
++  - "Stock Level": Render a horizontal colored bar (Width = (Stock/Sales)*10 limited to 100%).
++
++- THE VERDICT:
++  - If Margin < 20%: "ROAST: You are running a charity. Raise prices!"
++  - If Stock/Sales > 6: "ROAST: Hoarder alert! Cash is stuck in boxes."
++  - Else: "PASSED: Surprisingly competent."
++
++- NAVIGATION:
++  - Button: "🗑️ Delete Item" (Red).
++  - Button: "⬅️ Back to Dashboard" (Grey).
+
+# 2025-11-25 13:08:03.083604
++Create a Mini App called "The Savage CFO: Visual Edition".
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "I am here to audit your business. Enter your company name to begin."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL HEALTH (The Lightweight Graph)
++  - Calculate "Global Margin" = (Total Profit / Total Revenue) * 100.
++  - Display "Company Health Score:"
++  - Render a VISUAL BAR: A long grey container with a Green Bar inside. The width of the Green Bar % should match the Global Margin %.
++  - Label: "[Global Margin]% Efficiency"
++
++- SECTION B: FAST ADD
++  - Inputs: "Product Name", "Cost ($)", "Price ($)", "Stock Qty", "Monthly Sales".
++  - Button: "➕ Add Item" (Style: Green).
++
++- SECTION C: INVENTORY LIST (UI Fixed)
++  - Instruction: "Tap any card to see full report."
++  - Render the 'inventory' array as a list of styled CARDS.
++  - CARD DESIGN (Important):
++    - Background: White. Border-radius: 8px. Shadow: Soft. Margin-bottom: 10px. Padding: 15px.
++    - TOP ROW: Display "[Product Name]" (Bold) on the left.
++    - RIGHT SIDE: Display a STATUS BADGE.
++      - Logic: If Margin < 20% OR (Stock/Sales) > 6: Show Badge "🔥 ROAST ME" (Red Background, White Text).
++      - Else: Show Badge "✅ GOOD" (Green Background, White Text).
++    - BOTTOM ROW: Display "Stock: [Qty] | Margin: [Margin]%" in small grey text.
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Case File: [selectedProduct.name]"
++
++- THE VISUAL METRICS (Graphs):
++  - "Profit Margin": Render a horizontal colored bar (Width = Margin %).
++  - "Stock Level": Render a horizontal colored bar (Width = (Stock/Sales)*10 limited to 100%).
++
++- THE VERDICT:
++  - If Margin < 20%: "ROAST: You are running a charity. Raise prices!"
++  - If Stock/Sales > 6: "ROAST: Hoarder alert! Cash is stuck in boxes."
++  - Else: "PASSED: Surprisingly competent."
++
++- NAVIGATION:
++  - Button: "🗑️ Delete Item" (Red).
++  - Button: "⬅️ Back to Dashboard" (Grey).
