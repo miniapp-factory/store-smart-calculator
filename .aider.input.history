@@ -1240,3 +1240,171 @@
 +  - Container Style: display: flex; gap: 10px; width: 100%;
 +  - Button 1: "🗑️ Delete" (Style: Red, flex: 1).
 +  - Button 2: "⬅️ Back to Dashboard" (Style: Grey, flex: 2).
+
+# 2025-11-25 14:39:41.949383
++Create a Mini App called "The Savage CFO: Crystal Clear Edition".
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "I am here to help you start or manage your business. I will calculate your real profits and explain the math in simple English. Enter your company name to begin."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL HEALTH
++  - Logic: GlobalMargin = (TotalProfit / TotalRevenue) * 100.
++  - Display "Business Health Score:"
++  - RENDER ACCURATE BAR:
++    - Container: Grey background, 100% width, 15px height, rounded.
++    - Inner Bar: Green background. Width = `Math.min(GlobalMargin, 100) + "%"`.
++  - Subtitle: "This bar fills up as you make more profit."
++
++- SECTION B: EASY INPUTS (Simple Language)
++  - Input 1: "Product Name" (e.g., Burger)
++  - Input 2: "Cost to Make/Buy 1 Item ($)" (The money you lose initially)
++  - Input 3: "Ad Spend per Item ($)" (Money paid to FB/Tiktok ads)
++  - Input 4: "Selling Price ($)" (What the customer pays you)
++  - Input 5: "Stock Qty" (How many you have right now)
++  - Input 6: "Monthly Sales" (How many you sell in a month)
++  - Button: "➕ Add Item" (Style: Green).
++
++- SECTION C: INVENTORY LIST
++  - Render 'inventory' array as styled CARDS.
++  - Card Design: White background, soft shadow.
++    - Left: "[Product Name]" (Bold).
++    - Right: STATUS BADGE. (If ROI < 100%: "⚠️ RISKY". Else: "🚀 SCALABLE").
++    - Bottom: "In Stock: [Qty]"
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Analysis: [selectedProduct.name]"
++
++- PART 1: VISUAL GRAPHS (Text Outside the Bar)
++  *Render these metrics. Ensure text is ABOVE the bar.*
++  1. Label: "Profit Margin ([Margin]%)"
++     - Bar: Blue. Width = `Math.min(Margin, 100) + "%"`.
++  2. Label: "Marketing Cost ([AdSpend/Price*100]%)"
++     - Bar: Red. Width = `Math.min((AdSpend/Price*100), 100) + "%"`.
++
++- PART 2: THE SIMPLE ENGLISH GRID (The Context Fix)
++  *Render a 2x2 Grid. Each box must have a light grey border and padding.*
++
++  - BOX 1 (The Cost)
++    - Title: "Total Cost to Make" (Small Grey Text)
++    - Value: "$[Cost + AdSpend]" (Big Bold Text)
++    - Meaning: "Money leaving your pocket (Item + Ads)." (Small Italic Text)
++
++  - BOX 2 (The Price)
++    - Title: "Selling Price" (Small Grey Text)
++    - Value: "$[Price]" (Big Bold Text)
++    - Meaning: "What the customer pays you." (Small Italic Text)
++
++  - BOX 3 (The Profit)
++    - Title: "Real Pocket Money" (Small Grey Text)
++    - Value: "$[Price - Cost - AdSpend]" (Big Green Text)
++    - Meaning: "The actual cash you keep." (Small Italic Text)
++
++  - BOX 4 (The Safety Line)
++    - Title: "Break-Even Price" (Small Grey Text)
++    - Value: "$[Cost + AdSpend]" (Big Red Text)
++    - Meaning: "Sell lower than this, and you lose money." (Small Italic Text)
++
++- PART 3: THE VERDICT
++  - If (Price - Cost - AdSpend) < 0: "ROAST: You are losing money! Stop ads or raise prices."
++  - Else: "VERDICT: This product is healthy. Keep selling!"
++
++- PART 4: ACTIONS
++  - Container Style: display: flex; gap: 10px; width: 100%;
++  - Button 1: "🗑️ Delete" (Style: Red, flex: 1).
++  - Button 2: "⬅️ Back to Dashboard" (Style: Grey, flex: 2).
+
+# 2025-11-25 14:39:41.949904
++Create a Mini App called "The Savage CFO: Crystal Clear Edition".
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description: "I am here to help you start or manage your business. I will calculate your real profits and explain the math in simple English. Enter your company name to begin."
++- Input: "Company Name"
++- Button: "Start Audit 🚀" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL HEALTH
++  - Logic: GlobalMargin = (TotalProfit / TotalRevenue) * 100.
++  - Display "Business Health Score:"
++  - RENDER ACCURATE BAR:
++    - Container: Grey background, 100% width, 15px height, rounded.
++    - Inner Bar: Green background. Width = `Math.min(GlobalMargin, 100) + "%"`.
++  - Subtitle: "This bar fills up as you make more profit."
++
++- SECTION B: EASY INPUTS (Simple Language)
++  - Input 1: "Product Name" (e.g., Burger)
++  - Input 2: "Cost to Make/Buy 1 Item ($)" (The money you lose initially)
++  - Input 3: "Ad Spend per Item ($)" (Money paid to FB/Tiktok ads)
++  - Input 4: "Selling Price ($)" (What the customer pays you)
++  - Input 5: "Stock Qty" (How many you have right now)
++  - Input 6: "Monthly Sales" (How many you sell in a month)
++  - Button: "➕ Add Item" (Style: Green).
++
++- SECTION C: INVENTORY LIST
++  - Render 'inventory' array as styled CARDS.
++  - Card Design: White background, soft shadow.
++    - Left: "[Product Name]" (Bold).
++    - Right: STATUS BADGE. (If ROI < 100%: "⚠️ RISKY". Else: "🚀 SCALABLE").
++    - Bottom: "In Stock: [Qty]"
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "📂 Analysis: [selectedProduct.name]"
++
++- PART 1: VISUAL GRAPHS (Text Outside the Bar)
++  *Render these metrics. Ensure text is ABOVE the bar.*
++  1. Label: "Profit Margin ([Margin]%)"
++     - Bar: Blue. Width = `Math.min(Margin, 100) + "%"`.
++  2. Label: "Marketing Cost ([AdSpend/Price*100]%)"
++     - Bar: Red. Width = `Math.min((AdSpend/Price*100), 100) + "%"`.
++
++- PART 2: THE SIMPLE ENGLISH GRID (The Context Fix)
++  *Render a 2x2 Grid. Each box must have a light grey border and padding.*
++
++  - BOX 1 (The Cost)
++    - Title: "Total Cost to Make" (Small Grey Text)
++    - Value: "$[Cost + AdSpend]" (Big Bold Text)
++    - Meaning: "Money leaving your pocket (Item + Ads)." (Small Italic Text)
++
++  - BOX 2 (The Price)
++    - Title: "Selling Price" (Small Grey Text)
++    - Value: "$[Price]" (Big Bold Text)
++    - Meaning: "What the customer pays you." (Small Italic Text)
++
++  - BOX 3 (The Profit)
++    - Title: "Real Pocket Money" (Small Grey Text)
++    - Value: "$[Price - Cost - AdSpend]" (Big Green Text)
++    - Meaning: "The actual cash you keep." (Small Italic Text)
++
++  - BOX 4 (The Safety Line)
++    - Title: "Break-Even Price" (Small Grey Text)
++    - Value: "$[Cost + AdSpend]" (Big Red Text)
++    - Meaning: "Sell lower than this, and you lose money." (Small Italic Text)
++
++- PART 3: THE VERDICT
++  - If (Price - Cost - AdSpend) < 0: "ROAST: You are losing money! Stop ads or raise prices."
++  - Else: "VERDICT: This product is healthy. Keep selling!"
++
++- PART 4: ACTIONS
++  - Container Style: display: flex; gap: 10px; width: 100%;
++  - Button 1: "🗑️ Delete" (Style: Red, flex: 1).
++  - Button 2: "⬅️ Back to Dashboard" (Style: Grey, flex: 2).
