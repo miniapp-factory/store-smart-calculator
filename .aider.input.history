@@ -56,3 +56,65 @@
 +```
 +
 +Generate an app logo and update the app metadata title and description.
+
+# 2025-11-25 11:12:27.786881
++Update the Mini App to be a "Pro Business Pricer".
++
++I need 5 Input Fields:
++1. "Product Name" (Text)
++2. "Total Wholesale Cost ($)" (Number)
++3. "Quantity in Batch" (Number)
++4. "Desired Profit Margin (%)" (Number, e.g., 50)
++5. "Planned Discount for Sale (%)" (Number, e.g., 15)
++
++System Instructions:
++You are an advanced Financial Analyst for small businesses. Your goal is to provide a complete pricing strategy, including a break-even point and a sale price.
++
++Follow this Math Logic:
++1. Unit Cost = (Total Wholesale Cost / Quantity).
++2. Overhead Buffer = Unit Cost * 0.15 (fixed 15% for shipping/handling).
++3. Break-Even Price = Unit Cost + Overhead Buffer. (Do not round yet).
++4. Regular Selling Price = Break-Even Price * (1 + (Desired Profit Margin / 100)). Round up to nearest 0.05.
++5. Sale Price = Regular Selling Price * (1 - (Planned Discount / 100)). Round up to nearest 0.05.
++6. Net Profit = Regular Selling Price - Break-Even Price.
++
++Output Display Layout:
++- Create a main heading: "🏷️ Pricing Strategy for [Product Name]"
++- Show the "Regular Selling Price" in a huge, bold font.
++- Below it, show a section called "🔥 Sale Option:" with the "Sale Price" and the discount percentage.
++- Create a section called "📊 Financial Breakdown:" with three lines:
++   - "Break-Even Price (Zero Profit): $[Amount]"
++   - "Net Profit per item: $[Amount]"
++   - "Total Profit from Batch: $[Amount]"
++- End with a smart tip about when to use the discount.
+
+# 2025-11-25 11:12:27.787503
++Update the Mini App to be a "Pro Business Pricer".
++
++I need 5 Input Fields:
++1. "Product Name" (Text)
++2. "Total Wholesale Cost ($)" (Number)
++3. "Quantity in Batch" (Number)
++4. "Desired Profit Margin (%)" (Number, e.g., 50)
++5. "Planned Discount for Sale (%)" (Number, e.g., 15)
++
++System Instructions:
++You are an advanced Financial Analyst for small businesses. Your goal is to provide a complete pricing strategy, including a break-even point and a sale price.
++
++Follow this Math Logic:
++1. Unit Cost = (Total Wholesale Cost / Quantity).
++2. Overhead Buffer = Unit Cost * 0.15 (fixed 15% for shipping/handling).
++3. Break-Even Price = Unit Cost + Overhead Buffer. (Do not round yet).
++4. Regular Selling Price = Break-Even Price * (1 + (Desired Profit Margin / 100)). Round up to nearest 0.05.
++5. Sale Price = Regular Selling Price * (1 - (Planned Discount / 100)). Round up to nearest 0.05.
++6. Net Profit = Regular Selling Price - Break-Even Price.
++
++Output Display Layout:
++- Create a main heading: "🏷️ Pricing Strategy for [Product Name]"
++- Show the "Regular Selling Price" in a huge, bold font.
++- Below it, show a section called "🔥 Sale Option:" with the "Sale Price" and the discount percentage.
++- Create a section called "📊 Financial Breakdown:" with three lines:
++   - "Break-Even Price (Zero Profit): $[Amount]"
++   - "Net Profit per item: $[Amount]"
++   - "Total Profit from Batch: $[Amount]"
++- End with a smart tip about when to use the discount.
