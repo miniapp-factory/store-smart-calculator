@@ -271,8 +271,8 @@ export default function SavageCfoGlitchFree() {
         </CardContent>
         <CardFooter>
           <Button
-            variant="outline"
-            className="w-full"
+            variant="default"
+            className="w-full bg-green-500 text-white"
             onClick={addItem}
           >
             ➕ Add Item
