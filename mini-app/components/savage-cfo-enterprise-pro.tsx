@@ -182,7 +182,7 @@ export default function SavageCfoEnterprisePro() {
               >
                 <CardContent className="flex justify-between items-center">
                   <span className="font-bold">{p.name}</span>
-                  <Badge variant={roi < 100 ? "destructive" : "success"}>
+                  <Badge>
                     {badgeText}
                   </Badge>
                 </CardContent>
