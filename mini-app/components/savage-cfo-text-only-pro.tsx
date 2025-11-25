@@ -209,9 +209,9 @@ export default function SavageCfoTextOnlyPro() {
               >
                 <div className="flex justify-between items-center">
                   <span className="font-semibold">{item.productName}</span>
-                  <Badge variant={itemProfit > 0 ? "success" : "destructive"}>
+                  <span className={itemProfit > 0 ? "bg-green-500 text-white px-2 py-0.5 rounded" : "bg-red-500 text-white px-2 py-0.5 rounded"}>
                     {itemProfit > 0 ? "✅ PROFITABLE" : "⚠️ LOSS"}
-                  </Badge>
+                  </span>
                 </div>
                 <p className="text-sm text-muted-foreground">
                   In Stock: {item.qty}
