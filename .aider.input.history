@@ -354,3 +354,101 @@
 +    4. Add 5 points for every item with Margin > 50%.
 +  - Display the "Bankruptcy Score" out of 100.
 +  - Display a "CFO Verdict" based on the score (e.g., If < 50: "I'm calling the liquidators. You are finished.").
+
+# 2025-11-25 12:33:47.591386
++Create a multi-page Mini App called "The Savage CFO: Ultimate Edition".
++
++State Management Requirements:
++1. State: `inventory` (Array of objects).
++2. State: `companyName` (String).
++3. State: `currentView` (String: 'home', 'dashboard', 'detail').
++4. State: `selectedProduct` (Object: holds the specific item the user clicked).
++
++--- VIEW 1: THE MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description Text: "Welcome to the ultimate business audit tool. I am here to judge your pricing strategy. I will analyze your inventory, roast your bad decisions, and help you find hidden profits."
++- Instruction: "Enter your business name to hire me."
++- Input: "Business Name"
++- Button: "Start Audit" (Action: Save name, set view to 'dashboard').
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "[Company Name] Dashboard" | "Total Inventory Value: $[Sum]"
++- Section A: Fast Add
++  - Inputs: "Product Name", "Cost to Buy/Make ($)", "Selling Price ($)", "Stock Qty", "Monthly Sales".
++  - Button: "Add Item" (Adds to array, clears inputs).
++- Section B: Inventory List
++  - Display the `inventory` array as a list of cards or buttons.
++  - Display: Product Name | Stock Level.
++  - Action: When a user clicks a product in this list, set `selectedProduct` to that item and switch view to 'detail'.
++- Section C: Global Audit
++  - Button: "Judge My Entire Business".
++  - Action: Show a popup or text alert with a "Bankruptcy Score" (0-100) based on the overall margins of all items.
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "Analysis for: [selectedProduct.name]"
++- The Logic Display (The Roast):
++  - Calculate Margin % = ((Price - Cost) / Price) * 100.
++  - Calculate Months of Inventory = Stock / Monthly Sales.
++  - Logic:
++    - If Margin < 20%: Display "ROAST: You are running a charity. Raise prices or quit."
++    - If Inventory > 6 months: Display "ROAST: You are a hoarder. Why is your cash stuck in boxes?"
++    - Else: Display "VERDICT: Surprisingly adequate."
++- The Data Grid:
++  - Show Cost, Price, Margin %, and Total Value in a clean grid.
++- Navigation:
++  - Button: "Delete This Item" (Removes from array, goes back to Dashboard).
++  - Button: "Back to Dashboard" (Keeps item, goes back).
++
++System Personality:
++- Use emojis.
++- Keep the language punchy and sarcastic.
++- Make the buttons distinct colors (e.g., 'Delete' should be red).
+
+# 2025-11-25 12:33:47.591827
++Create a multi-page Mini App called "The Savage CFO: Ultimate Edition".
++
++State Management Requirements:
++1. State: `inventory` (Array of objects).
++2. State: `companyName` (String).
++3. State: `currentView` (String: 'home', 'dashboard', 'detail').
++4. State: `selectedProduct` (Object: holds the specific item the user clicked).
++
++--- VIEW 1: THE MISSION BRIEFING (Home) ---
++- Title: "🕵️‍♂️ The Savage CFO"
++- Description Text: "Welcome to the ultimate business audit tool. I am here to judge your pricing strategy. I will analyze your inventory, roast your bad decisions, and help you find hidden profits."
++- Instruction: "Enter your business name to hire me."
++- Input: "Business Name"
++- Button: "Start Audit" (Action: Save name, set view to 'dashboard').
++
++--- VIEW 2: THE COMMAND CENTER (Dashboard) ---
++- Header: "[Company Name] Dashboard" | "Total Inventory Value: $[Sum]"
++- Section A: Fast Add
++  - Inputs: "Product Name", "Cost to Buy/Make ($)", "Selling Price ($)", "Stock Qty", "Monthly Sales".
++  - Button: "Add Item" (Adds to array, clears inputs).
++- Section B: Inventory List
++  - Display the `inventory` array as a list of cards or buttons.
++  - Display: Product Name | Stock Level.
++  - Action: When a user clicks a product in this list, set `selectedProduct` to that item and switch view to 'detail'.
++- Section C: Global Audit
++  - Button: "Judge My Entire Business".
++  - Action: Show a popup or text alert with a "Bankruptcy Score" (0-100) based on the overall margins of all items.
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Header: "Analysis for: [selectedProduct.name]"
++- The Logic Display (The Roast):
++  - Calculate Margin % = ((Price - Cost) / Price) * 100.
++  - Calculate Months of Inventory = Stock / Monthly Sales.
++  - Logic:
++    - If Margin < 20%: Display "ROAST: You are running a charity. Raise prices or quit."
++    - If Inventory > 6 months: Display "ROAST: You are a hoarder. Why is your cash stuck in boxes?"
++    - Else: Display "VERDICT: Surprisingly adequate."
++- The Data Grid:
++  - Show Cost, Price, Margin %, and Total Value in a clean grid.
++- Navigation:
++  - Button: "Delete This Item" (Removes from array, goes back to Dashboard).
++  - Button: "Back to Dashboard" (Keeps item, goes back).
++
++System Personality:
++- Use emojis.
++- Keep the language punchy and sarcastic.
++- Make the buttons distinct colors (e.g., 'Delete' should be red).
