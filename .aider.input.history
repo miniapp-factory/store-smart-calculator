@@ -1938,3 +1938,193 @@
 +
 +- PART 4: DELETE ACTION
 +  - Button: "🗑️ Delete Product" (Style: Red).
+
+# 2025-11-27 14:48:25.132210
++Create a Mini App called "The Savage CFO: Grandmaster Edition".
++
++UI DESIGN RULES (Strict):
++1. INPUT FIELDS: Must have `padding: 12px`, `border: 2px solid black`, and `border-radius: 8px`. They must look "clickable" and big.
++2. BUTTONS: Must have `font-weight: bold` and `box-shadow: 4px 4px 0px #000` (Retro card style).
++3. TEXT: Labels must be Uppercase and Bold.
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING ---
++- Title: "⚔️ The Savage CFO"
++- Description: "I am your War General. I will grade your business performance and analyze your market position. Enter your Company Name to mobilize."
++- Input: "Company Name"
++- Button: "ENTER WAR ROOM 🚀" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE WAR ROOM (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: THE REPORT CARD (Grading System is Back)
++  *Render a horizontal box with a thick black border.*
++  - Calculate "Efficiency" = (TotalProfit / TotalRevenue) * 100.
++  - Logic:
++    - If Efficiency > 40: Grade = "A+ (Legendary)"
++    - If Efficiency > 20: Grade = "B (Solid)"
++    - If Efficiency > 0: Grade = "C (Surviving)"
++    - Else: Grade = "F (Bankrupt)"
++  - Display:
++    - Left: "Total Profit: $[Sum Net Profit]"
++    - Right: Big Text Badge "[Grade]"
++
++- SECTION B: INTEL ENTRY (High Visibility Inputs)
++  *Render each input group with a grey background container so it pops out.*
++  
++  1. Label: "PRODUCT NAME"
++     - Input: [productName] (Placeholder: "e.g. Super Burger")
++
++  2. Label: "UNIT COST ($)"
++     - Subtitle: "Cost to make + Ad Spend"
++     - Input: [cost]
++
++  3. Label: "YOUR PRICE ($)"
++     - Subtitle: "What you charge"
++     - Input: [price]
++
++  4. Label: "COMPETITOR PRICE ($)"
++     - Subtitle: "What rivals charge"
++     - Input: [competitorPrice]
++
++  5. Label: "STOCK QTY"
++     - Input: [qty]
++
++  - Button: "➕ ADD STRATEGY" (Style: Green Background, Black Text, Thick Border).
++
++- SECTION C: INVENTORY CARDS
++  - Render 'inventory' array.
++  - Card Style: White card, thick black border, shadow.
++  - Display: "[Product Name] (Stock: [Qty])"
++  - Action: Make the entire card clickable.
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Button: "⬅️ BACK TO DASHBOARD" (Style: Full Width, Black Background, White Text, Bold, Large Padding).
++
++- Header: "📂 Analysis: [selectedProduct.name]"
++
++- PART 1: THE SMART VERDICT (Logic Fix)
++  - Calculate Margin % = ((Price - Cost) / Price) * 100.
++  - Calculate PriceDiff = Price - CompetitorPrice.
++
++  - LOGIC CHAIN (The Fix):
++    1. If (Price < Cost):
++       "💀 FATAL ERROR: You are selling at a loss. Stop immediately."
++    2. If (Price < CompetitorPrice) AND (Margin > 20):
++       "🏆 THE HOLY GRAIL: You are cheaper than rivals AND profitable. This is how you win."
++    3. If (Price > CompetitorPrice) AND (Margin > 40):
++       "💎 LUXURY BRAND: You are expensive, but your high margins prove people love your quality. Good job."
++    4. If (Price > CompetitorPrice) AND (Margin < 20):
++       "⚠️ DANGER ZONE: You are expensive AND have low margins. You will lose to competitors. Lower your costs!"
++    5. Else:
++       "✅ STABLE: You are doing okay, but watch your ad spend."
++
++- PART 2: THE NUMBERS GRID
++  *Render 2x2 Grid with borders.*
++  - Box 1: "Total Cost" -> "$[Cost]"
++  - Box 2: "Competitor Price" -> "$[CompetitorPrice]"
++  - Box 3: "Real Profit" -> "$[Price - Cost]"
++  - Box 4: "Margin" -> "[Margin]%"
++
++- PART 3: DELETE ACTION
++  - Button: "🗑️ BURN THIS PRODUCT" (Style: Red Background, Thick Border).
+
+# 2025-11-27 14:48:25.132845
++Create a Mini App called "The Savage CFO: Grandmaster Edition".
++
++UI DESIGN RULES (Strict):
++1. INPUT FIELDS: Must have `padding: 12px`, `border: 2px solid black`, and `border-radius: 8px`. They must look "clickable" and big.
++2. BUTTONS: Must have `font-weight: bold` and `box-shadow: 4px 4px 0px #000` (Retro card style).
++3. TEXT: Labels must be Uppercase and Bold.
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING ---
++- Title: "⚔️ The Savage CFO"
++- Description: "I am your War General. I will grade your business performance and analyze your market position. Enter your Company Name to mobilize."
++- Input: "Company Name"
++- Button: "ENTER WAR ROOM 🚀" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE WAR ROOM (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: THE REPORT CARD (Grading System is Back)
++  *Render a horizontal box with a thick black border.*
++  - Calculate "Efficiency" = (TotalProfit / TotalRevenue) * 100.
++  - Logic:
++    - If Efficiency > 40: Grade = "A+ (Legendary)"
++    - If Efficiency > 20: Grade = "B (Solid)"
++    - If Efficiency > 0: Grade = "C (Surviving)"
++    - Else: Grade = "F (Bankrupt)"
++  - Display:
++    - Left: "Total Profit: $[Sum Net Profit]"
++    - Right: Big Text Badge "[Grade]"
++
++- SECTION B: INTEL ENTRY (High Visibility Inputs)
++  *Render each input group with a grey background container so it pops out.*
++  
++  1. Label: "PRODUCT NAME"
++     - Input: [productName] (Placeholder: "e.g. Super Burger")
++
++  2. Label: "UNIT COST ($)"
++     - Subtitle: "Cost to make + Ad Spend"
++     - Input: [cost]
++
++  3. Label: "YOUR PRICE ($)"
++     - Subtitle: "What you charge"
++     - Input: [price]
++
++  4. Label: "COMPETITOR PRICE ($)"
++     - Subtitle: "What rivals charge"
++     - Input: [competitorPrice]
++
++  5. Label: "STOCK QTY"
++     - Input: [qty]
++
++  - Button: "➕ ADD STRATEGY" (Style: Green Background, Black Text, Thick Border).
++
++- SECTION C: INVENTORY CARDS
++  - Render 'inventory' array.
++  - Card Style: White card, thick black border, shadow.
++  - Display: "[Product Name] (Stock: [Qty])"
++  - Action: Make the entire card clickable.
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Button: "⬅️ BACK TO DASHBOARD" (Style: Full Width, Black Background, White Text, Bold, Large Padding).
++
++- Header: "📂 Analysis: [selectedProduct.name]"
++
++- PART 1: THE SMART VERDICT (Logic Fix)
++  - Calculate Margin % = ((Price - Cost) / Price) * 100.
++  - Calculate PriceDiff = Price - CompetitorPrice.
++
++  - LOGIC CHAIN (The Fix):
++    1. If (Price < Cost):
++       "💀 FATAL ERROR: You are selling at a loss. Stop immediately."
++    2. If (Price < CompetitorPrice) AND (Margin > 20):
++       "🏆 THE HOLY GRAIL: You are cheaper than rivals AND profitable. This is how you win."
++    3. If (Price > CompetitorPrice) AND (Margin > 40):
++       "💎 LUXURY BRAND: You are expensive, but your high margins prove people love your quality. Good job."
++    4. If (Price > CompetitorPrice) AND (Margin < 20):
++       "⚠️ DANGER ZONE: You are expensive AND have low margins. You will lose to competitors. Lower your costs!"
++    5. Else:
++       "✅ STABLE: You are doing okay, but watch your ad spend."
++
++- PART 2: THE NUMBERS GRID
++  *Render 2x2 Grid with borders.*
++  - Box 1: "Total Cost" -> "$[Cost]"
++  - Box 2: "Competitor Price" -> "$[CompetitorPrice]"
++  - Box 3: "Real Profit" -> "$[Price - Cost]"
++  - Box 4: "Margin" -> "[Margin]%"
++
++- PART 3: DELETE ACTION
++  - Button: "🗑️ BURN THIS PRODUCT" (Style: Red Background, Thick Border).
