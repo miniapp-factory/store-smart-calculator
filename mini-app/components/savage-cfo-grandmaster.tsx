@@ -122,7 +122,7 @@ export default function SavageCfoGrandmaster() {
                 Total Profit: ${computeReport().totalProfit.toFixed(2)}
               </p>
             </div>
-            <Badge variant="secondary" className="text-xl font-bold">
+            <Badge className="text-xl font-bold">
               {computeReport().grade}
             </Badge>
           </Card>
@@ -201,7 +201,7 @@ export default function SavageCfoGrandmaster() {
                 >
                   <div className="flex justify-between items-center">
                     <h3 className="font-semibold">{p.productName}</h3>
-                    <Badge variant="secondary">{statusBadge(p)}</Badge>
+                    <Badge>{statusBadge(p)}</Badge>
                   </div>
                   <p className="text-sm text-muted-foreground">
                     Stock: {p.qty}
