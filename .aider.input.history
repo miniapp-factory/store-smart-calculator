@@ -1744,3 +1744,197 @@
 +  - Flex Row:
 +    - Button: "🗑️ Delete" (Red)
 +    - Button: "⬅️ Dashboard" (Grey)
+
+# 2025-11-27 14:21:01.324883
++Create a Mini App called "The Savage CFO: Market War Edition".
++
++STRICT UI RULES:
++1. Inputs must be "Wide/Full Width" (avoid small spinner arrows).
++2. All Explainer Text must be ABOVE the input box.
++3. NO GRAPHS/BARS. Use colored text/badges only.
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "⚔️ The Savage CFO"
++- Description: "I am your war general. I will analyze your costs, compare you to competitors, and tell you if you will win or go bankrupt. Enter Company Name to mobilize."
++- Input: "Company Name"
++- Button: "Enter War Room 🚀" (Style: Wide, Black Background).
++
++--- VIEW 2: THE WAR ROOM (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL REPORT (Flex Row)
++  1. Box: "Cash Out" -> "$[Sum Cost+Ads]"
++  2. Box: "Cash In" -> "$[Sum Net Profit]"
++  3. Box: "War Chest" -> "[Calculate: (TotalProfit/TotalRevenue)*100]%" (Subtitle: "Efficiency Score")
++
++- SECTION B: INTEL ENTRY (New Complexity)
++  *Render these inputs with descriptions ABOVE them.*
++
++  1. Label: "PRODUCT NAME"
++  2. Desc: "What are we selling?"
++  3. Input: [productName]
++
++  4. Label: "UNIT COST ($)"
++  5. Desc: "Total cost to make one unit."
++  6. Input: [cost]
++
++  7. Label: "AD SPEND ($)"
++  8. Desc: "Cost to acquire one customer (CAC)."
++  9. Input: [adSpend]
++
++  10. Label: "YOUR PRICE ($)"
++  11. Desc: "What you charge."
++  12. Input: [price]
++
++  13. Label: "COMPETITOR PRICE ($)" (⚠️ NEW)
++  14. Desc: "How much does your rival charge for this?"
++  15. Input: [competitorPrice]
++
++  16. Label: "STOCK QTY"
++  17. Desc: "Current inventory count."
++  18. Input: [qty]
++
++  - Button: "➕ Add Strategy" (Style: Green, Large).
++
++- SECTION C: INVENTORY LIST
++  - Render 'inventory' as Cards.
++  - Display: "[Product Name]"
++  - Status Badge:
++    - If Price > CompetitorPrice: "⚠️ OVERPRICED" (Yellow)
++    - If Profit < 0: "💀 LOSING MONEY" (Red)
++    - Else: "✅ DOMINATING" (Green)
++  - Action: Click to view Full Analysis.
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Button: "⬅️ BACK TO DASHBOARD" (Style: Full Width, Black Background, White Text, Bold. Place at the VERY TOP).
++
++- Header: "📂 Analysis: [selectedProduct.name]"
++
++- PART 1: COMPETITOR CHECK (The Smart Verdict)
++  - Calculate Difference = Price - CompetitorPrice.
++  - Logic:
++    - If Difference > 0: Display "⚠️ You are $[Difference] more expensive than your rival."
++    - If Difference < 0: Display "✅ You are $[Difference] cheaper. Good for volume."
++    - If Difference == 0: Display "⚖️ You are matched on price. It's a marketing war."
++
++- PART 2: THE NUMBERS (2x2 Grid)
++  - Box 1: "Total Cost" -> "$[Cost + AdSpend]"
++  - Box 2: "Real Profit" -> "$[Price - Cost - AdSpend]"
++  - Box 3: "Margin" -> "[Margin]%"
++  - Box 4: "Competitor Price" -> "$[competitorPrice]"
++
++- PART 3: THE SAVAGE VERDICT (Complex Logic)
++  - If (Price - Cost - AdSpend) < 0:
++    "ROAST: You are donating money to your customers. Stop selling immediately."
++  - Else If (Price > CompetitorPrice) AND (Margin < 20%):
++    "ROAST: Worst case scenario. You are more expensive than your rival AND you make no money. Fix your supply chain."
++  - Else If (Price < CompetitorPrice) AND (Margin > 30%):
++    "VERDICT: The Holy Grail. You are cheaper than them and still rich. Destroy them."
++  - Else:
++    "VERDICT: You are surviving, but not thriving. Watch your ad spend."
++
++- PART 4: DELETE ACTION
++  - Button: "🗑️ Delete Product" (Style: Red).
+
+# 2025-11-27 14:21:01.325375
++Create a Mini App called "The Savage CFO: Market War Edition".
++
++STRICT UI RULES:
++1. Inputs must be "Wide/Full Width" (avoid small spinner arrows).
++2. All Explainer Text must be ABOVE the input box.
++3. NO GRAPHS/BARS. Use colored text/badges only.
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "⚔️ The Savage CFO"
++- Description: "I am your war general. I will analyze your costs, compare you to competitors, and tell you if you will win or go bankrupt. Enter Company Name to mobilize."
++- Input: "Company Name"
++- Button: "Enter War Room 🚀" (Style: Wide, Black Background).
++
++--- VIEW 2: THE WAR ROOM (Dashboard) ---
++- Header: "🏢 [Company Name] HQ"
++
++- SECTION A: GLOBAL REPORT (Flex Row)
++  1. Box: "Cash Out" -> "$[Sum Cost+Ads]"
++  2. Box: "Cash In" -> "$[Sum Net Profit]"
++  3. Box: "War Chest" -> "[Calculate: (TotalProfit/TotalRevenue)*100]%" (Subtitle: "Efficiency Score")
++
++- SECTION B: INTEL ENTRY (New Complexity)
++  *Render these inputs with descriptions ABOVE them.*
++
++  1. Label: "PRODUCT NAME"
++  2. Desc: "What are we selling?"
++  3. Input: [productName]
++
++  4. Label: "UNIT COST ($)"
++  5. Desc: "Total cost to make one unit."
++  6. Input: [cost]
++
++  7. Label: "AD SPEND ($)"
++  8. Desc: "Cost to acquire one customer (CAC)."
++  9. Input: [adSpend]
++
++  10. Label: "YOUR PRICE ($)"
++  11. Desc: "What you charge."
++  12. Input: [price]
++
++  13. Label: "COMPETITOR PRICE ($)" (⚠️ NEW)
++  14. Desc: "How much does your rival charge for this?"
++  15. Input: [competitorPrice]
++
++  16. Label: "STOCK QTY"
++  17. Desc: "Current inventory count."
++  18. Input: [qty]
++
++  - Button: "➕ Add Strategy" (Style: Green, Large).
++
++- SECTION C: INVENTORY LIST
++  - Render 'inventory' as Cards.
++  - Display: "[Product Name]"
++  - Status Badge:
++    - If Price > CompetitorPrice: "⚠️ OVERPRICED" (Yellow)
++    - If Profit < 0: "💀 LOSING MONEY" (Red)
++    - Else: "✅ DOMINATING" (Green)
++  - Action: Click to view Full Analysis.
++
++--- VIEW 3: THE INTERROGATION ROOM (Detail View) ---
++- Button: "⬅️ BACK TO DASHBOARD" (Style: Full Width, Black Background, White Text, Bold. Place at the VERY TOP).
++
++- Header: "📂 Analysis: [selectedProduct.name]"
++
++- PART 1: COMPETITOR CHECK (The Smart Verdict)
++  - Calculate Difference = Price - CompetitorPrice.
++  - Logic:
++    - If Difference > 0: Display "⚠️ You are $[Difference] more expensive than your rival."
++    - If Difference < 0: Display "✅ You are $[Difference] cheaper. Good for volume."
++    - If Difference == 0: Display "⚖️ You are matched on price. It's a marketing war."
++
++- PART 2: THE NUMBERS (2x2 Grid)
++  - Box 1: "Total Cost" -> "$[Cost + AdSpend]"
++  - Box 2: "Real Profit" -> "$[Price - Cost - AdSpend]"
++  - Box 3: "Margin" -> "[Margin]%"
++  - Box 4: "Competitor Price" -> "$[competitorPrice]"
++
++- PART 3: THE SAVAGE VERDICT (Complex Logic)
++  - If (Price - Cost - AdSpend) < 0:
++    "ROAST: You are donating money to your customers. Stop selling immediately."
++  - Else If (Price > CompetitorPrice) AND (Margin < 20%):
++    "ROAST: Worst case scenario. You are more expensive than your rival AND you make no money. Fix your supply chain."
++  - Else If (Price < CompetitorPrice) AND (Margin > 30%):
++    "VERDICT: The Holy Grail. You are cheaper than them and still rich. Destroy them."
++  - Else:
++    "VERDICT: You are surviving, but not thriving. Watch your ad spend."
++
++- PART 4: DELETE ACTION
++  - Button: "🗑️ Delete Product" (Style: Red).
