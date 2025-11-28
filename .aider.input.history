@@ -3148,3 +3148,203 @@
 +
 +- PART 3: DELETE
 +  - Button: "🗑️ Delete Product" (Style: Red).
+
+# 2025-11-28 14:38:58.237010
++Create a Mini App called "The Savage CFO: Proof Edition".
++
++CRITICAL BUILD RULES (To Fix "Unused Variable" Errors):
++1. IF YOU DEFINE A VARIABLE, YOU MUST RENDER IT IN THE JSX.
++2. Specifically: You must display `totalCapitalAtRisk` and `totalInventory` in the Dashboard Summary.
++3. Do NOT define helper functions (like `getMargin`) if you don't use them. Just do the math inline.
++4. Do NOT import UI components like CardFooter. Use standard HTML `<div>` with inline styles.
++
++UI RULES (Typable Inputs):
++1. Use standard HTML `<input type="number">`.
++2. INLINE STYLE: `width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; background: #fff; appearance: none;`. (This ensures typability).
++3. Container: `max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif;`.
++
++State Management:
++- Use `useState` for: `inventory`, `companyName`, `currentView`, `selectedProduct`.
++
++--- VIEW 1: MISSION BRIEFING (Full Description) ---
++- Title: "💼 The Business Auditor"
++- Description: "I am your personal Business Auditor. I will analyze your inventory, calculate your true ROI, roast your bad decisions, and help you find hidden profits. Most people fail because they don't know their numbers. Enter your Company Name to begin the audit."
++- Input: Company Name.
++- Button: "Open Dashboard" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: DASHBOARD ---
++- Header: "📊 [CompanyName] Report Card"
++
++- SECTION A: THE GRADING SYSTEM (Using ALL Variables)
++  *Render a Grid of 4 Cards to ensure all variables are used.*
++  
++  1. Card: "Business Grade"
++     - Logic: `Efficiency` = (TotalProfit / TotalRevenue) * 100.
++     - Display: Grade A/B/C/F based on Efficiency.
++  
++  2. Card: "Total Potential Profit"
++     - Display: $[Sum of (Price - Cost - Ads) * Stock]
++
++  3. Card: "Capital at Risk" (Fixes Unused Var Error)
++     - Display: $[Sum of (Cost + Ads) * Stock] (Define this sum as `totalCapitalAtRisk`).
++
++  4. Card: "Total Inventory" (Fixes Unused Var Error)
++     - Display: [Sum of Qty] units (Define this sum as `totalInventory`).
++
++- SECTION B: ADD PRODUCT (Typable & Complete)
++  *Render inputs with labels ABOVE them. All inputs must handle `onChange`.*
++
++  1. Label: "PRODUCT NAME"
++     - Helper: "What are you selling?"
++     - Input: [productName] (Text)
++
++  2. Label: "UNIT COST"
++     - Helper: "Cost to make/buy ONE item?"
++     - Input: [cost] (Number)
++
++  3. Label: "AD SPEND"
++     - Helper: "Marketing cost per item?"
++     - Input: [adSpend] (Number)
++
++  4. Label: "SELLING PRICE"
++     - Helper: "What customers pay you?"
++     - Input: [price] (Number)
++
++  5. Label: "COMPETITOR PRICE"
++     - Helper: "What rivals charge?"
++     - Input: [competitorPrice] (Number)
++
++  6. Label: "STOCK QTY"
++     - Helper: "How many do you have?"
++     - Input: [qty] (Number)
++
++  7. Label: "MONTHLY SALES" (Must be used)
++     - Helper: "Est. sales per month"
++     - Input: [monthlySales] (Number)
++
++  - Button: "➕ Add to Inventory" (Style: Green Background, White Text).
++
++- SECTION C: INVENTORY LIST
++  - Render `inventory` array.
++  - Design: White Card, Shadow.
++  - Content:
++    - "[Product Name]" (Bold)
++    - Badge: If Price > CompetitorPrice "💎 PREMIUM". Else "⚡ COMPETITIVE".
++    - "Stock: [Qty] | Net Profit: $[Price - Cost - Ads]"
++
++--- VIEW 3: DETAIL VIEW ---
++- Header: "📈 Analysis: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey, Full Width).
++
++- PART 1: COMPETITIVE CHECK
++  - If Price < CompetitorPrice: "✅ ADVANTAGE: You are cheaper by $[Diff]."
++  - If Price > CompetitorPrice: "💎 PREMIUM: You charge $[Diff] more."
++
++- PART 2: ADVANCED MATH
++  1. "True Net Profit": $[Price - Cost - Ads]
++  2. "Contribution Margin": $[Price - Cost]
++  3. "Break-Even Volume": [Sum(Cost+Ads) / (Price-(Cost+Ads))] units
++  4. "Months of Inventory": [Qty / MonthlySales] (Uses the monthlySales variable).
++
++- PART 3: ACTIONS
++  - Button: "🗑️ Delete Product" (Style: Red).
+
+# 2025-11-28 14:38:58.237734
++Create a Mini App called "The Savage CFO: Proof Edition".
++
++CRITICAL BUILD RULES (To Fix "Unused Variable" Errors):
++1. IF YOU DEFINE A VARIABLE, YOU MUST RENDER IT IN THE JSX.
++2. Specifically: You must display `totalCapitalAtRisk` and `totalInventory` in the Dashboard Summary.
++3. Do NOT define helper functions (like `getMargin`) if you don't use them. Just do the math inline.
++4. Do NOT import UI components like CardFooter. Use standard HTML `<div>` with inline styles.
++
++UI RULES (Typable Inputs):
++1. Use standard HTML `<input type="number">`.
++2. INLINE STYLE: `width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; background: #fff; appearance: none;`. (This ensures typability).
++3. Container: `max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif;`.
++
++State Management:
++- Use `useState` for: `inventory`, `companyName`, `currentView`, `selectedProduct`.
++
++--- VIEW 1: MISSION BRIEFING (Full Description) ---
++- Title: "💼 The Business Auditor"
++- Description: "I am your personal Business Auditor. I will analyze your inventory, calculate your true ROI, roast your bad decisions, and help you find hidden profits. Most people fail because they don't know their numbers. Enter your Company Name to begin the audit."
++- Input: Company Name.
++- Button: "Open Dashboard" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: DASHBOARD ---
++- Header: "📊 [CompanyName] Report Card"
++
++- SECTION A: THE GRADING SYSTEM (Using ALL Variables)
++  *Render a Grid of 4 Cards to ensure all variables are used.*
++  
++  1. Card: "Business Grade"
++     - Logic: `Efficiency` = (TotalProfit / TotalRevenue) * 100.
++     - Display: Grade A/B/C/F based on Efficiency.
++  
++  2. Card: "Total Potential Profit"
++     - Display: $[Sum of (Price - Cost - Ads) * Stock]
++
++  3. Card: "Capital at Risk" (Fixes Unused Var Error)
++     - Display: $[Sum of (Cost + Ads) * Stock] (Define this sum as `totalCapitalAtRisk`).
++
++  4. Card: "Total Inventory" (Fixes Unused Var Error)
++     - Display: [Sum of Qty] units (Define this sum as `totalInventory`).
++
++- SECTION B: ADD PRODUCT (Typable & Complete)
++  *Render inputs with labels ABOVE them. All inputs must handle `onChange`.*
++
++  1. Label: "PRODUCT NAME"
++     - Helper: "What are you selling?"
++     - Input: [productName] (Text)
++
++  2. Label: "UNIT COST"
++     - Helper: "Cost to make/buy ONE item?"
++     - Input: [cost] (Number)
++
++  3. Label: "AD SPEND"
++     - Helper: "Marketing cost per item?"
++     - Input: [adSpend] (Number)
++
++  4. Label: "SELLING PRICE"
++     - Helper: "What customers pay you?"
++     - Input: [price] (Number)
++
++  5. Label: "COMPETITOR PRICE"
++     - Helper: "What rivals charge?"
++     - Input: [competitorPrice] (Number)
++
++  6. Label: "STOCK QTY"
++     - Helper: "How many do you have?"
++     - Input: [qty] (Number)
++
++  7. Label: "MONTHLY SALES" (Must be used)
++     - Helper: "Est. sales per month"
++     - Input: [monthlySales] (Number)
++
++  - Button: "➕ Add to Inventory" (Style: Green Background, White Text).
++
++- SECTION C: INVENTORY LIST
++  - Render `inventory` array.
++  - Design: White Card, Shadow.
++  - Content:
++    - "[Product Name]" (Bold)
++    - Badge: If Price > CompetitorPrice "💎 PREMIUM". Else "⚡ COMPETITIVE".
++    - "Stock: [Qty] | Net Profit: $[Price - Cost - Ads]"
++
++--- VIEW 3: DETAIL VIEW ---
++- Header: "📈 Analysis: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey, Full Width).
++
++- PART 1: COMPETITIVE CHECK
++  - If Price < CompetitorPrice: "✅ ADVANTAGE: You are cheaper by $[Diff]."
++  - If Price > CompetitorPrice: "💎 PREMIUM: You charge $[Diff] more."
++
++- PART 2: ADVANCED MATH
++  1. "True Net Profit": $[Price - Cost - Ads]
++  2. "Contribution Margin": $[Price - Cost]
++  3. "Break-Even Volume": [Sum(Cost+Ads) / (Price-(Cost+Ads))] units
++  4. "Months of Inventory": [Qty / MonthlySales] (Uses the monthlySales variable).
++
++- PART 3: ACTIONS
++  - Button: "🗑️ Delete Product" (Style: Red).
