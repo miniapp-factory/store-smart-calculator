@@ -2820,3 +2820,139 @@
 +
 +- PART 3: ACTIONS
 +  - Button: "🗑️ Delete Product" (Style: Red).
+
+# 2025-11-28 09:28:10.280365
++Create a Mini App called "The Savage CFO: Executive Edition".
++
++CODE STRUCTURE RULES (CRITICAL):
++1. Define all `interfaces` (Product, State) at the VERY TOP of the file, outside the main component.
++2. Do not use Markdown backticks (```) inside the code.
++3. Use standard `export default function App()`.
++
++UI RULES (Typable Inputs):
++1. Use standard HTML `<input type="number" />`.
++2. Apply this specific inline style to all inputs to hide arrows and make them typable: `appearance: none; -webkit-appearance: none; margin: 0; width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px;`.
++3. Wrap the app in a container: `max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif;`.
++
++State Management:
++- Use `useState` for: `inventory` (Array<Product>), `companyName` (string), `currentView` ('home' | 'dashboard' | 'detail'), `selectedProduct` (Product | null).
++
++--- VIEW 1: HOME ---
++- Title: "💼 The Business Auditor"
++- Text: "Professional financial audit tool. Enter Company Name."
++- Input: Company Name.
++- Button: "Open Dashboard" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: DASHBOARD ---
++- Header: "📊 [CompanyName] Financials"
++
++- SECTION A: SUMMARY CARDS (2x2 Grid)
++  1. "Capital at Risk": $[Sum of (cost + adSpend) * qty]
++  2. "Projected Profit": $[Sum of (price - cost - adSpend) * qty]
++  3. "Total Inventory": [Sum of qty] units
++  4. "Global Efficiency": [Calculate (TotalProfit / TotalRevenue * 100)]%
++
++- SECTION B: ADD PRODUCT FORM
++  *Render these 6 inputs. Label must be ABOVE the input.*
++  1. "Product Name" (Text)
++  2. "Unit Cost (Make/Buy)" (Number)
++  3. "Ad Spend per Item" (Number)
++  4. "Selling Price" (Number)
++  5. "Competitor Price" (Number)
++  6. "Stock Quantity" (Number)
++  - Button: "➕ Add to Inventory" (Style: Green Background, White Text, Padding 12px).
++
++- SECTION C: INVENTORY LIST
++  - Render `inventory.map()` as Cards.
++  - Card Style: White background, shadow, padding 15px, margin-bottom 10px.
++  - Content:
++    - Bold Text: [product.name]
++    - Badge: If (price > competitorPrice) show "💎 PREMIUM". Else show "⚡ COMPETITIVE".
++    - Small Text: "Stock: [qty] | Net Profit: $[price - cost - adSpend]"
++  - Action: On Click -> Set `selectedProduct` and switch view to 'detail'.
++
++--- VIEW 3: DETAIL VIEW ---
++- Header: "📈 Audit: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey Background, White Text, Full Width, Padding 12px).
++
++- PART 1: COMPETITIVE ANALYSIS
++  - Logic: If price < competitorPrice: Display "✅ MARKET ADVANTAGE: Undercutting rival by $[diff]."
++  - Logic: If price > competitorPrice: Display "💎 PREMIUM POSITION: Charging $[diff] premium."
++
++- PART 2: DATA LIST (Render as simple text rows)
++  1. "True Net Profit": $[price - cost - adSpend]
++  2. "Contribution Margin": $[price - cost]
++  3. "Markup %": [((price - cost) / cost) * 100]%
++  4. "Break-Even Volume": [Math.ceil((cost + adSpend) / (price - (cost + adSpend)))] units
++  5. "ROAS (Ad Efficiency)": [price / adSpend]x
++
++- PART 3: DELETE
++  - Button: "🗑️ Delete Product" (Style: Red Background, White Text).
+
+# 2025-11-28 09:28:10.280808
++Create a Mini App called "The Savage CFO: Executive Edition".
++
++CODE STRUCTURE RULES (CRITICAL):
++1. Define all `interfaces` (Product, State) at the VERY TOP of the file, outside the main component.
++2. Do not use Markdown backticks (```) inside the code.
++3. Use standard `export default function App()`.
++
++UI RULES (Typable Inputs):
++1. Use standard HTML `<input type="number" />`.
++2. Apply this specific inline style to all inputs to hide arrows and make them typable: `appearance: none; -webkit-appearance: none; margin: 0; width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px;`.
++3. Wrap the app in a container: `max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif;`.
++
++State Management:
++- Use `useState` for: `inventory` (Array<Product>), `companyName` (string), `currentView` ('home' | 'dashboard' | 'detail'), `selectedProduct` (Product | null).
++
++--- VIEW 1: HOME ---
++- Title: "💼 The Business Auditor"
++- Text: "Professional financial audit tool. Enter Company Name."
++- Input: Company Name.
++- Button: "Open Dashboard" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: DASHBOARD ---
++- Header: "📊 [CompanyName] Financials"
++
++- SECTION A: SUMMARY CARDS (2x2 Grid)
++  1. "Capital at Risk": $[Sum of (cost + adSpend) * qty]
++  2. "Projected Profit": $[Sum of (price - cost - adSpend) * qty]
++  3. "Total Inventory": [Sum of qty] units
++  4. "Global Efficiency": [Calculate (TotalProfit / TotalRevenue * 100)]%
++
++- SECTION B: ADD PRODUCT FORM
++  *Render these 6 inputs. Label must be ABOVE the input.*
++  1. "Product Name" (Text)
++  2. "Unit Cost (Make/Buy)" (Number)
++  3. "Ad Spend per Item" (Number)
++  4. "Selling Price" (Number)
++  5. "Competitor Price" (Number)
++  6. "Stock Quantity" (Number)
++  - Button: "➕ Add to Inventory" (Style: Green Background, White Text, Padding 12px).
++
++- SECTION C: INVENTORY LIST
++  - Render `inventory.map()` as Cards.
++  - Card Style: White background, shadow, padding 15px, margin-bottom 10px.
++  - Content:
++    - Bold Text: [product.name]
++    - Badge: If (price > competitorPrice) show "💎 PREMIUM". Else show "⚡ COMPETITIVE".
++    - Small Text: "Stock: [qty] | Net Profit: $[price - cost - adSpend]"
++  - Action: On Click -> Set `selectedProduct` and switch view to 'detail'.
++
++--- VIEW 3: DETAIL VIEW ---
++- Header: "📈 Audit: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey Background, White Text, Full Width, Padding 12px).
++
++- PART 1: COMPETITIVE ANALYSIS
++  - Logic: If price < competitorPrice: Display "✅ MARKET ADVANTAGE: Undercutting rival by $[diff]."
++  - Logic: If price > competitorPrice: Display "💎 PREMIUM POSITION: Charging $[diff] premium."
++
++- PART 2: DATA LIST (Render as simple text rows)
++  1. "True Net Profit": $[price - cost - adSpend]
++  2. "Contribution Margin": $[price - cost]
++  3. "Markup %": [((price - cost) / cost) * 100]%
++  4. "Break-Even Volume": [Math.ceil((cost + adSpend) / (price - (cost + adSpend)))] units
++  5. "ROAS (Ad Efficiency)": [price / adSpend]x
++
++- PART 3: DELETE
++  - Button: "🗑️ Delete Product" (Style: Red Background, White Text).
