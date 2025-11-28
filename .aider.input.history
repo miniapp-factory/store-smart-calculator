@@ -2476,3 +2476,173 @@
 +
 +- PART 3: ACTIONS
 +  - Button: "🗑️ Delete Product" (Style: Red).
+
+# 2025-11-28 06:58:08.411632
++Create a Mini App called "The Savage CFO: Final Polish".
++
++STRICT UI & CSS RULES (Do not ignore):
++1. MAIN CONTAINER: Wrap the entire app in a container with `max-width: 600px`, `margin: 0 auto`, and `padding: 20px`. This ensures everything is CENTRALIZED.
++2. INPUT FIELDS: Use standard HTML `<input>` tags. Set `background-color: #ffffff`, `border: 1px solid #ccc`, `padding: 10px`, and `width: 100%`. They must be CLICKABLE and TYPABLE.
++3. HELPER TEXT: The description for inputs must be a `<p>` tag with `font-size: 12px` and `color: #666` placed immediately *above* the input.
++4. BACK BUTTON: Must have `background-color: #555555` (Dark Grey), `color: white`, `padding: 15px`, `width: 100%`, `text-align: center`.
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "💼 The Business Auditor"
++- Description: "Professional financial analysis for your business. Track inventory, analyze competitor pricing, and calculate true ROI. Enter Company Name."
++- Input: "Company Name"
++- Button: "Open Dashboard" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE DASHBOARD ---
++- Header: "📊 [Company Name] Overview"
++
++- SECTION A: GLOBAL FINANCIALS (2x2 Grid)
++  1. Card: "Total Capital Invested" -> Value: "$[Sum of (Cost + Ads) * Stock]"
++  2. Card: "Projected Net Profit" -> Value: "$[Sum of (Price - Cost - Ads) * Stock]"
++  3. Card: "Global Efficiency" -> Value: "[Calculate (TotalProfit/TotalRevenue)*100]%"
++  4. Card: "Capital at Risk" -> Value: "$[Sum of (Cost+Ads)*Stock]" (Subtitle: "Money tied up in stock")
++
++- SECTION B: ADD NEW PRODUCT (Fixing the Inputs)
++  *Render each input exactly like this:*
++  
++  1. Label: "PRODUCT NAME" (Bold)
++     - Helper Text: "What is the name of the item?"
++     - Input: [productName]
++
++  2. Label: "UNIT COST" (Bold)
++     - Helper Text: "Cost to make/buy ONE unit?"
++     - Input: [cost] (Type: Number)
++
++  3. Label: "AD SPEND" (Bold)
++     - Helper Text: "Advertising cost per unit?"
++     - Input: [adSpend] (Type: Number)
++
++  4. Label: "YOUR PRICE" (Bold)
++     - Helper Text: "What do you charge customers?"
++     - Input: [price] (Type: Number)
++
++  5. Label: "COMPETITOR PRICE" (Bold)
++     - Helper Text: "What does your rival charge?"
++     - Input: [competitorPrice] (Type: Number)
++
++  6. Label: "STOCK QTY" (Bold)
++     - Helper Text: "How many do you have?"
++     - Input: [qty] (Type: Number)
++
++  - Button: "➕ Add to Inventory" (Style: Green Background, White Text, Wide).
++
++- SECTION C: INVENTORY LIST
++  - Render 'inventory' array.
++  - Design: Clean White Card with soft shadow.
++  - Display: "[Product Name]" (Bold)
++  - Badge: (If Price < CompetitorPrice: "✅ COMPETITIVE". Else "⚠️ PREMIUM").
++  - Bottom Text: "Stock: [Qty]"
++
++--- VIEW 3: DETAILED ANALYSIS ---
++- Header: "📈 Analysis: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey Background, White Text, Full Width).
++
++- PART 1: COMPETITOR ANALYSIS
++  - Text: "You: $[Price] vs Rival: $[CompetitorPrice]"
++  - Logic:
++    - If Price < CompetitorPrice: "✅ You are undercutting the market."
++    - If Price > CompetitorPrice: "💎 You are charging a premium."
++
++- PART 2: FINANCIAL DEEP DIVE (List Style)
++  1. "Real Net Profit per Unit": $[Price - Cost - AdSpend]
++  2. "Ad Efficiency (ROAS)": [Price / AdSpend]x
++  3. "Safe Discount Limit": $[Price - (Cost + AdSpend)] (Explanation: "Max discount before loss")
++  4. "Break-Even Volume": [Sum(Cost+Ads) / (Price-(Cost+Ads))] units
++
++- PART 3: ACTIONS
++  - Button: "🗑️ Delete Product" (Style: Red Background, White Text).
+
+# 2025-11-28 06:58:08.412239
++Create a Mini App called "The Savage CFO: Final Polish".
++
++STRICT UI & CSS RULES (Do not ignore):
++1. MAIN CONTAINER: Wrap the entire app in a container with `max-width: 600px`, `margin: 0 auto`, and `padding: 20px`. This ensures everything is CENTRALIZED.
++2. INPUT FIELDS: Use standard HTML `<input>` tags. Set `background-color: #ffffff`, `border: 1px solid #ccc`, `padding: 10px`, and `width: 100%`. They must be CLICKABLE and TYPABLE.
++3. HELPER TEXT: The description for inputs must be a `<p>` tag with `font-size: 12px` and `color: #666` placed immediately *above* the input.
++4. BACK BUTTON: Must have `background-color: #555555` (Dark Grey), `color: white`, `padding: 15px`, `width: 100%`, `text-align: center`.
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING (Home) ---
++- Title: "💼 The Business Auditor"
++- Description: "Professional financial analysis for your business. Track inventory, analyze competitor pricing, and calculate true ROI. Enter Company Name."
++- Input: "Company Name"
++- Button: "Open Dashboard" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: THE DASHBOARD ---
++- Header: "📊 [Company Name] Overview"
++
++- SECTION A: GLOBAL FINANCIALS (2x2 Grid)
++  1. Card: "Total Capital Invested" -> Value: "$[Sum of (Cost + Ads) * Stock]"
++  2. Card: "Projected Net Profit" -> Value: "$[Sum of (Price - Cost - Ads) * Stock]"
++  3. Card: "Global Efficiency" -> Value: "[Calculate (TotalProfit/TotalRevenue)*100]%"
++  4. Card: "Capital at Risk" -> Value: "$[Sum of (Cost+Ads)*Stock]" (Subtitle: "Money tied up in stock")
++
++- SECTION B: ADD NEW PRODUCT (Fixing the Inputs)
++  *Render each input exactly like this:*
++  
++  1. Label: "PRODUCT NAME" (Bold)
++     - Helper Text: "What is the name of the item?"
++     - Input: [productName]
++
++  2. Label: "UNIT COST" (Bold)
++     - Helper Text: "Cost to make/buy ONE unit?"
++     - Input: [cost] (Type: Number)
++
++  3. Label: "AD SPEND" (Bold)
++     - Helper Text: "Advertising cost per unit?"
++     - Input: [adSpend] (Type: Number)
++
++  4. Label: "YOUR PRICE" (Bold)
++     - Helper Text: "What do you charge customers?"
++     - Input: [price] (Type: Number)
++
++  5. Label: "COMPETITOR PRICE" (Bold)
++     - Helper Text: "What does your rival charge?"
++     - Input: [competitorPrice] (Type: Number)
++
++  6. Label: "STOCK QTY" (Bold)
++     - Helper Text: "How many do you have?"
++     - Input: [qty] (Type: Number)
++
++  - Button: "➕ Add to Inventory" (Style: Green Background, White Text, Wide).
++
++- SECTION C: INVENTORY LIST
++  - Render 'inventory' array.
++  - Design: Clean White Card with soft shadow.
++  - Display: "[Product Name]" (Bold)
++  - Badge: (If Price < CompetitorPrice: "✅ COMPETITIVE". Else "⚠️ PREMIUM").
++  - Bottom Text: "Stock: [Qty]"
++
++--- VIEW 3: DETAILED ANALYSIS ---
++- Header: "📈 Analysis: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey Background, White Text, Full Width).
++
++- PART 1: COMPETITOR ANALYSIS
++  - Text: "You: $[Price] vs Rival: $[CompetitorPrice]"
++  - Logic:
++    - If Price < CompetitorPrice: "✅ You are undercutting the market."
++    - If Price > CompetitorPrice: "💎 You are charging a premium."
++
++- PART 2: FINANCIAL DEEP DIVE (List Style)
++  1. "Real Net Profit per Unit": $[Price - Cost - AdSpend]
++  2. "Ad Efficiency (ROAS)": [Price / AdSpend]x
++  3. "Safe Discount Limit": $[Price - (Cost + AdSpend)] (Explanation: "Max discount before loss")
++  4. "Break-Even Volume": [Sum(Cost+Ads) / (Price-(Cost+Ads))] units
++
++- PART 3: ACTIONS
++  - Button: "🗑️ Delete Product" (Style: Red Background, White Text).
