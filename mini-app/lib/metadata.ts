@@ -1,3 +1,3 @@
-export const title = "The Savage CFO: Grandmaster Edition";
-export const description = "The Savage CFO: Grandmaster Edition is a powerful audit tool that roasts your margins, calculates inventory, and gives you a reality check on your stock levels.";
+export const title = "The Savage CFO: Executive Pro";
+export const description = "The Savage CFO: Executive Pro is a powerful audit tool that calculates hidden costs, true margins, and break-even points, providing a comprehensive financial overview for your business.";
 export const url = process.env.NEXT_PUBLIC_URL;

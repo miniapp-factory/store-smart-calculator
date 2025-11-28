@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function SavageCfoExecutivePro() {
@@ -120,7 +118,7 @@ export default function SavageCfoExecutivePro() {
         Professional financial audit tool. I calculate hidden costs, true margins,
         and break-even points. Enter Company Name.
       </p>
-      <Input
+      <input
         type="text"
         placeholder="Company Name"
         value={companyName}
@@ -380,7 +378,7 @@ export default function SavageCfoExecutivePro() {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="max-w-[600px] mx-auto p-5 flex flex-col gap-4">
       {currentView === "home" && renderHome()}
       {currentView === "dashboard" && renderDashboard()}
       {currentView === "detail" && renderDetail()}
