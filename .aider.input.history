@@ -3554,3 +3554,221 @@
 +
 +- PART 3: ACTIONS
 +  - Button: "🗑️ Delete Product" (Style: Red).
+
+# 2025-11-28 15:53:56.417844
++Create a Mini App called "The Savage CFO: Market Strategy Edition".
++
++CODE STRUCTURE RULES (CRITICAL):
++1. Define all `interfaces` (Product, State) at the VERY TOP.
++2. DO NOT use markdown backticks inside the code.
++3. DO NOT define unused variables.
++4. Use standard `export default function App()`.
++
++UI RULES (Typable Inputs):
++1. INPUTS: Standard HTML `<input type="number">`.
++2. CSS: Apply this inline style to ALL inputs: `appearance: none; -webkit-appearance: none; margin: 0; width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; background: #ffffff;`.
++3. CONTAINER: `max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif;`.
++
++State Management:
++- `inventory` (Array), `companyName` (String), `currentView` (String), `selectedProduct` (Object).
++
++--- VIEW 1: MISSION BRIEFING ---
++- Title: "💼 The Business Auditor"
++- Description: "I am your personal Business Auditor. I will analyze your inventory, calculate your true ROI, roast your bad decisions, and help you find hidden profits. Enter your Company Name to begin the audit."
++- Input: Company Name.
++- Button: "Open Dashboard" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: DASHBOARD ---
++- Header: "📊 [CompanyName] Report Card"
++
++- SECTION A: THE GRADING SYSTEM (Restored)
++  *Render a Bordered Card.*
++  - Step 1: Calculate Global Efficiency = (TotalProfit / TotalRevenue) * 100.
++  - Step 2: Determine Grade:
++    - If Efficiency > 30: "A (Excellent)"
++    - If Efficiency > 15: "B (Good)"
++    - If Efficiency > 0: "C (Surviving)"
++    - Else: "F (Bankrupt)"
++  - Display:
++    - Big Text: "Business Grade: [Grade]"
++    - Subtitle: "Total Potential Profit: $[Sum of Net Profit]"
++    - Subtitle: "Capital Invested: $[Sum of Total Cost]"
++
++- SECTION B: ADD PRODUCT (With Descriptions)
++  *Render inputs with helper text ABOVE each input.*
++
++  1. Label: "PRODUCT NAME"
++     - Desc: "What is the item name?"
++     - Input: [productName] (Text)
++
++  2. Label: "UNIT COST"
++     - Desc: "Cost to make/buy ONE item?"
++     - Input: [cost] (Number)
++
++  3. Label: "AD SPEND"
++     - Desc: "Marketing cost per item?"
++     - Input: [adSpend] (Number)
++
++  4. Label: "SELLING PRICE"
++     - Desc: "Final price the customer pays?"
++     - Input: [price] (Number)
++
++  5. Label: "COMPETITOR PRICE"
++     - Desc: "What does your rival charge?"
++     - Input: [competitorPrice] (Number)
++
++  6. Label: "STOCK QTY"
++     - Desc: "How many units do you have?"
++     - Input: [qty] (Number)
++
++  - Button: "➕ Add to Inventory" (Style: Green Background, White Text).
++
++- SECTION C: INVENTORY LIST
++  - Render `inventory` array.
++  - Design: White Card, Shadow.
++  - Content:
++    - "[Product Name]" (Bold)
++    - Badge: If Price > CompetitorPrice "💎 PREMIUM". Else "⚡ COMPETITIVE".
++    - "Stock: [Qty] | Net Profit: $[Price - Cost - Ads]"
++  - Action: Click to view detail.
++
++--- VIEW 3: DETAIL VIEW (The Complex Competitive Check) ---
++- Header: "📈 Analysis: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey, Full Width).
++
++- PART 1: STRATEGIC POSITIONING (Complex Logic)
++  *Calculate Margin % = ((Price - Cost - Ads) / Price) * 100.*
++  *Render one of these 4 Scenarios based on data:*
++
++  1. IF (Price < CompetitorPrice) AND (Margin > 20):
++     "🏆 STRATEGY: SMART DISRUPTION"
++     "Verdict: You are cheaper than your rival BUT you still make high profit. You will destroy them."
++
++  2. IF (Price < CompetitorPrice) AND (Margin < 20):
++     "⚠️ STRATEGY: RACE TO THE BOTTOM"
++     "Verdict: You are undercutting the rival, but your profit is too thin. One bad month will bankrupt you."
++
++  3. IF (Price > CompetitorPrice) AND (Margin > 30):
++     "💎 STRATEGY: LUXURY BRANDING"
++     "Verdict: You are expensive, but your margins prove you have a premium product. Keep quality high."
++
++  4. IF (Price > CompetitorPrice) AND (Margin < 30):
++     "💀 STRATEGY: DEAD ON ARRIVAL"
++     "Verdict: You are more expensive than the rival AND you make less money. You are inefficient. Fix costs immediately."
++
++- PART 2: THE NUMBERS
++  1. "True Net Profit": $[Price - Cost - Ads]
++  2. "Contribution Margin": $[Price - Cost]
++  3. "Competitor Variance": $[Price - CompetitorPrice]
++
++- PART 3: ACTIONS
++  - Button: "🗑️ Delete Product" (Style: Red).
+
+# 2025-11-28 15:53:56.418448
++Create a Mini App called "The Savage CFO: Market Strategy Edition".
++
++CODE STRUCTURE RULES (CRITICAL):
++1. Define all `interfaces` (Product, State) at the VERY TOP.
++2. DO NOT use markdown backticks inside the code.
++3. DO NOT define unused variables.
++4. Use standard `export default function App()`.
++
++UI RULES (Typable Inputs):
++1. INPUTS: Standard HTML `<input type="number">`.
++2. CSS: Apply this inline style to ALL inputs: `appearance: none; -webkit-appearance: none; margin: 0; width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; background: #ffffff;`.
++3. CONTAINER: `max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif;`.
++
++State Management:
++- `inventory` (Array), `companyName` (String), `currentView` (String), `selectedProduct` (Object).
++
++--- VIEW 1: MISSION BRIEFING ---
++- Title: "💼 The Business Auditor"
++- Description: "I am your personal Business Auditor. I will analyze your inventory, calculate your true ROI, roast your bad decisions, and help you find hidden profits. Enter your Company Name to begin the audit."
++- Input: Company Name.
++- Button: "Open Dashboard" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: DASHBOARD ---
++- Header: "📊 [CompanyName] Report Card"
++
++- SECTION A: THE GRADING SYSTEM (Restored)
++  *Render a Bordered Card.*
++  - Step 1: Calculate Global Efficiency = (TotalProfit / TotalRevenue) * 100.
++  - Step 2: Determine Grade:
++    - If Efficiency > 30: "A (Excellent)"
++    - If Efficiency > 15: "B (Good)"
++    - If Efficiency > 0: "C (Surviving)"
++    - Else: "F (Bankrupt)"
++  - Display:
++    - Big Text: "Business Grade: [Grade]"
++    - Subtitle: "Total Potential Profit: $[Sum of Net Profit]"
++    - Subtitle: "Capital Invested: $[Sum of Total Cost]"
++
++- SECTION B: ADD PRODUCT (With Descriptions)
++  *Render inputs with helper text ABOVE each input.*
++
++  1. Label: "PRODUCT NAME"
++     - Desc: "What is the item name?"
++     - Input: [productName] (Text)
++
++  2. Label: "UNIT COST"
++     - Desc: "Cost to make/buy ONE item?"
++     - Input: [cost] (Number)
++
++  3. Label: "AD SPEND"
++     - Desc: "Marketing cost per item?"
++     - Input: [adSpend] (Number)
++
++  4. Label: "SELLING PRICE"
++     - Desc: "Final price the customer pays?"
++     - Input: [price] (Number)
++
++  5. Label: "COMPETITOR PRICE"
++     - Desc: "What does your rival charge?"
++     - Input: [competitorPrice] (Number)
++
++  6. Label: "STOCK QTY"
++     - Desc: "How many units do you have?"
++     - Input: [qty] (Number)
++
++  - Button: "➕ Add to Inventory" (Style: Green Background, White Text).
++
++- SECTION C: INVENTORY LIST
++  - Render `inventory` array.
++  - Design: White Card, Shadow.
++  - Content:
++    - "[Product Name]" (Bold)
++    - Badge: If Price > CompetitorPrice "💎 PREMIUM". Else "⚡ COMPETITIVE".
++    - "Stock: [Qty] | Net Profit: $[Price - Cost - Ads]"
++  - Action: Click to view detail.
++
++--- VIEW 3: DETAIL VIEW (The Complex Competitive Check) ---
++- Header: "📈 Analysis: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey, Full Width).
++
++- PART 1: STRATEGIC POSITIONING (Complex Logic)
++  *Calculate Margin % = ((Price - Cost - Ads) / Price) * 100.*
++  *Render one of these 4 Scenarios based on data:*
++
++  1. IF (Price < CompetitorPrice) AND (Margin > 20):
++     "🏆 STRATEGY: SMART DISRUPTION"
++     "Verdict: You are cheaper than your rival BUT you still make high profit. You will destroy them."
++
++  2. IF (Price < CompetitorPrice) AND (Margin < 20):
++     "⚠️ STRATEGY: RACE TO THE BOTTOM"
++     "Verdict: You are undercutting the rival, but your profit is too thin. One bad month will bankrupt you."
++
++  3. IF (Price > CompetitorPrice) AND (Margin > 30):
++     "💎 STRATEGY: LUXURY BRANDING"
++     "Verdict: You are expensive, but your margins prove you have a premium product. Keep quality high."
++
++  4. IF (Price > CompetitorPrice) AND (Margin < 30):
++     "💀 STRATEGY: DEAD ON ARRIVAL"
++     "Verdict: You are more expensive than the rival AND you make less money. You are inefficient. Fix costs immediately."
++
++- PART 2: THE NUMBERS
++  1. "True Net Profit": $[Price - Cost - Ads]
++  2. "Contribution Margin": $[Price - Cost]
++  3. "Competitor Variance": $[Price - CompetitorPrice]
++
++- PART 3: ACTIONS
++  - Button: "🗑️ Delete Product" (Style: Red).
