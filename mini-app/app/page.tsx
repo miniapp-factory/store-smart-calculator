@@ -1,5 +1,5 @@
 import { generateMetadata } from "@/lib/farcaster-embed";
-import SavageCfoProofEdition from "@/components/savage-cfo-proof-edition";
+import SavageCfoLogicEdition from "@/components/savage-cfo-logic-edition";
 
 export { generateMetadata };
 
@@ -7,7 +7,7 @@ export default function Home() {
   // NEVER write anything here, only use this page to import components
   return (
     <main className="flex flex-col gap-3 place-items-center place-content-center px-4 grow">
-      <SavageCfoProofEdition />
+      <SavageCfoLogicEdition />
     </main>
   );
 }
