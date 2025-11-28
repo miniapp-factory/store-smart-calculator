@@ -185,7 +185,7 @@ export default function SavageCfoExecutivePro() {
           <h3 className="font-semibold mb-2">Add Product</h3>
           <div className="grid grid-cols-1 gap-4">
             <div>
-              <Label htmlFor="product-name">Product Name</Label>
+              <p>Product Name</p>
               <Input
                 id="product-name"
                 type="text"
