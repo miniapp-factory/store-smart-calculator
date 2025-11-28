@@ -2646,3 +2646,177 @@
 +
 +- PART 3: ACTIONS
 +  - Button: "🗑️ Delete Product" (Style: Red Background, White Text).
+
+# 2025-11-28 08:57:43.912766
++Create a Mini App called "The Savage CFO: Executive Pro".
++
++UI & CSS RULES (The "Typable" Fix):
++1. INPUT FIELDS: Use standard HTML `<input type="number">`.
++2. CSS OVERRIDE: Apply `appearance: none;` and `margin: 0` to all inputs to REMOVE the small arrows/spinners.
++3. STYLING: Inputs must have `width: 100%`, `padding: 12px`, `font-size: 16px`, and `border: 1px solid #ccc`. They must look like large text boxes.
++4. LAYOUT: Wrap the whole app in a centered container (`max-width: 600px`).
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING ---
++- Title: "💼 The Business Auditor"
++- Description: "Professional financial audit tool. I calculate hidden costs, true margins, and break-even points. Enter Company Name."
++- Input: "Company Name"
++- Button: "Open Dashboard" (Style: Wide, Black Background).
++
++--- VIEW 2: THE DASHBOARD (Deep Math) ---
++- Header: "📊 [Company Name] Financials"
++
++- SECTION A: EXECUTIVE SUMMARY (4 Cards)
++  1. "Total Capital At Risk"
++     - Value: "$[Sum of (Cost + Ads) * Stock]"
++     - Subtitle: "Cash tied up in stock"
++  2. "Projected Net Profit"
++     - Value: "$[Sum of (Price - Cost - Ads) * Stock]"
++     - Subtitle: "Total potential earnings"
++  3. "Blended Margin"
++     - Value: "[Calculate (TotalProfit / TotalRevenue) * 100]%"
++     - Subtitle: "Average company efficiency"
++  4. "Inventory Volume"
++     - Value: "[Sum of Qty] Units"
++     - Subtitle: "Total items in warehouse"
++
++- SECTION B: ADD PRODUCT (Typable Inputs)
++  *Render each input with the label ABOVE it.*
++  
++  1. Label: "Product Name" -> Input: [productName]
++  2. Label: "Unit Cost (Make/Buy)" -> Input: [cost]
++  3. Label: "Ad Spend per Item" -> Input: [adSpend]
++  4. Label: "Your Selling Price" -> Input: [price]
++  5. Label: "Competitor Price" -> Input: [competitorPrice]
++  6. Label: "Stock Quantity" -> Input: [qty]
++
++  - Button: "➕ Add to Inventory" (Style: Green, Wide).
++
++- SECTION C: INVENTORY LIST
++  - Render 'inventory' array as clean White Cards.
++  - Display: "[Product Name]" (Bold).
++  - Badge: If Price > CompetitorPrice: "💎 PREMIUM". Else "⚡ COMPETITIVE".
++  - Bottom: "In Stock: [Qty] | Net Profit: $[Price - Cost - Ads]"
++
++--- VIEW 3: DEEP DIVE ANALYSIS (Advanced Math) ---
++- Header: "📈 Audit: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey, Full Width).
++
++- PART 1: COMPETITIVE POSITION
++  - Logic: If Price < CompetitorPrice:
++    "✅ MARKET ADVANTAGE: You are undercutting rivals by $[CompetitorPrice - Price]."
++  - Logic: If Price > CompetitorPrice:
++    "💎 PREMIUM POSITION: You are charging $[Price - CompetitorPrice] more than rivals."
++
++- PART 2: THE PROFIT MATRIX (New Calculations)
++  *Render a List of Data Points:*
++
++  1. "True Net Profit": $[Price - Cost - AdSpend]
++     - (Explanation: "Cash in pocket after all costs")
++  
++  2. "Contribution Margin": $[Price - Cost]
++     - (Explanation: "Profit before marketing costs are paid")
++
++  3. "Markup Percentage": [((Price - Cost) / Cost) * 100]%
++     - (Explanation: "How much you marked up the raw cost")
++
++  4. "Break-Even Volume": [Sum(Cost+Ads) / (Price-(Cost+Ads))] units
++     - (Explanation: "Sales needed to verify the strategy")
++
++  5. "Ad Efficiency (ROAS)": [Price / AdSpend]x
++     - (Explanation: "Revenue generated per $1 of ads")
++
++- PART 3: ACTIONS
++  - Button: "🗑️ Delete Product" (Style: Red).
+
+# 2025-11-28 08:57:43.913429
++Create a Mini App called "The Savage CFO: Executive Pro".
++
++UI & CSS RULES (The "Typable" Fix):
++1. INPUT FIELDS: Use standard HTML `<input type="number">`.
++2. CSS OVERRIDE: Apply `appearance: none;` and `margin: 0` to all inputs to REMOVE the small arrows/spinners.
++3. STYLING: Inputs must have `width: 100%`, `padding: 12px`, `font-size: 16px`, and `border: 1px solid #ccc`. They must look like large text boxes.
++4. LAYOUT: Wrap the whole app in a centered container (`max-width: 600px`).
++
++State Requirements:
++1. `inventory` (Array of objects)
++2. `companyName` (String)
++3. `currentView` (String: 'home', 'dashboard', 'detail')
++4. `selectedProduct` (Object)
++
++--- VIEW 1: MISSION BRIEFING ---
++- Title: "💼 The Business Auditor"
++- Description: "Professional financial audit tool. I calculate hidden costs, true margins, and break-even points. Enter Company Name."
++- Input: "Company Name"
++- Button: "Open Dashboard" (Style: Wide, Black Background).
++
++--- VIEW 2: THE DASHBOARD (Deep Math) ---
++- Header: "📊 [Company Name] Financials"
++
++- SECTION A: EXECUTIVE SUMMARY (4 Cards)
++  1. "Total Capital At Risk"
++     - Value: "$[Sum of (Cost + Ads) * Stock]"
++     - Subtitle: "Cash tied up in stock"
++  2. "Projected Net Profit"
++     - Value: "$[Sum of (Price - Cost - Ads) * Stock]"
++     - Subtitle: "Total potential earnings"
++  3. "Blended Margin"
++     - Value: "[Calculate (TotalProfit / TotalRevenue) * 100]%"
++     - Subtitle: "Average company efficiency"
++  4. "Inventory Volume"
++     - Value: "[Sum of Qty] Units"
++     - Subtitle: "Total items in warehouse"
++
++- SECTION B: ADD PRODUCT (Typable Inputs)
++  *Render each input with the label ABOVE it.*
++  
++  1. Label: "Product Name" -> Input: [productName]
++  2. Label: "Unit Cost (Make/Buy)" -> Input: [cost]
++  3. Label: "Ad Spend per Item" -> Input: [adSpend]
++  4. Label: "Your Selling Price" -> Input: [price]
++  5. Label: "Competitor Price" -> Input: [competitorPrice]
++  6. Label: "Stock Quantity" -> Input: [qty]
++
++  - Button: "➕ Add to Inventory" (Style: Green, Wide).
++
++- SECTION C: INVENTORY LIST
++  - Render 'inventory' array as clean White Cards.
++  - Display: "[Product Name]" (Bold).
++  - Badge: If Price > CompetitorPrice: "💎 PREMIUM". Else "⚡ COMPETITIVE".
++  - Bottom: "In Stock: [Qty] | Net Profit: $[Price - Cost - Ads]"
++
++--- VIEW 3: DEEP DIVE ANALYSIS (Advanced Math) ---
++- Header: "📈 Audit: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey, Full Width).
++
++- PART 1: COMPETITIVE POSITION
++  - Logic: If Price < CompetitorPrice:
++    "✅ MARKET ADVANTAGE: You are undercutting rivals by $[CompetitorPrice - Price]."
++  - Logic: If Price > CompetitorPrice:
++    "💎 PREMIUM POSITION: You are charging $[Price - CompetitorPrice] more than rivals."
++
++- PART 2: THE PROFIT MATRIX (New Calculations)
++  *Render a List of Data Points:*
++
++  1. "True Net Profit": $[Price - Cost - AdSpend]
++     - (Explanation: "Cash in pocket after all costs")
++  
++  2. "Contribution Margin": $[Price - Cost]
++     - (Explanation: "Profit before marketing costs are paid")
++
++  3. "Markup Percentage": [((Price - Cost) / Cost) * 100]%
++     - (Explanation: "How much you marked up the raw cost")
++
++  4. "Break-Even Volume": [Sum(Cost+Ads) / (Price-(Cost+Ads))] units
++     - (Explanation: "Sales needed to verify the strategy")
++
++  5. "Ad Efficiency (ROAS)": [Price / AdSpend]x
++     - (Explanation: "Revenue generated per $1 of ads")
++
++- PART 3: ACTIONS
++  - Button: "🗑️ Delete Product" (Style: Red).
