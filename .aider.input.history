@@ -2956,3 +2956,195 @@
 +
 +- PART 3: DELETE
 +  - Button: "🗑️ Delete Product" (Style: Red Background, White Text).
+
+# 2025-11-28 10:01:26.789497
++Create a Mini App called "The Savage CFO: Ultimate Stable".
++
++CODE STRUCTURE RULES (CRITICAL):
++1. Define all `interfaces` (Product, State) at the VERY TOP of the file, outside the main function.
++2. Do not use Markdown backticks (```) inside the code block.
++3. Use standard `export default function App()`.
++
++UI RULES (Typable Inputs):
++1. Use standard HTML `<input type="number">`.
++2. Apply this INLINE STYLE to all inputs: `appearance: none; -webkit-appearance: none; margin: 0; width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;`. (This hides the arrows and makes them clickable).
++3. Container: `max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif;`.
++
++State Management:
++- Use `useState` for: `inventory`, `companyName`, `currentView`, `selectedProduct`.
++
++--- VIEW 1: MISSION BRIEFING (Full Description) ---
++- Title: "💼 The Business Auditor"
++- Description: "I am your personal Business Auditor. I will analyze your inventory, calculate your true ROI, roast your bad decisions, and help you find hidden profits. Enter your Company Name to begin the audit."
++- Input: Company Name.
++- Button: "Open Dashboard" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: DASHBOARD ---
++- Header: "📊 [CompanyName] Report Card"
++
++- SECTION A: THE GRADING SYSTEM
++  *Render a horizontal Card with a thick border.*
++  - Calculate `Efficiency` = (TotalProfit / TotalRevenue) * 100.
++  - Logic:
++    - If Efficiency > 40: Grade = "A+ (Legendary)"
++    - If Efficiency > 20: Grade = "B (Solid)"
++    - If Efficiency > 0: Grade = "C (Surviving)"
++    - Else: Grade = "F (Bankrupt)"
++  - Display:
++    - Left: "Total Profit: $[Sum Net Profit]"
++    - Right: Big Text Badge "[Grade]"
++
++- SECTION B: EXECUTIVE SUMMARY (Grid)
++  1. "Capital Risk": $[Sum of (cost + adSpend) * qty]
++  2. "Projected Profit": $[Sum of (price - cost - adSpend) * qty]
++  3. "Total Inventory": [Sum of qty] units
++
++- SECTION C: ADD PRODUCT (With Explanations)
++  *Render each input exactly like this:*
++  
++  1. Label: "PRODUCT NAME" (Bold)
++     - Helper Text: "What is the name of the item?" (Small Grey)
++     - Input: [name]
++
++  2. Label: "UNIT COST ($)"
++     - Helper Text: "Cost to make or buy ONE single item?"
++     - Input: [cost]
++
++  3. Label: "AD SPEND ($)"
++     - Helper Text: "Estimated advertising cost per sale?"
++     - Input: [adSpend]
++
++  4. Label: "SELLING PRICE ($)"
++     - Helper Text: "What does the customer pay you?"
++     - Input: [price]
++
++  5. Label: "COMPETITOR PRICE ($)"
++     - Helper Text: "What does your rival charge?"
++     - Input: [competitorPrice]
++
++  6. Label: "STOCK QTY"
++     - Helper Text: "How many units do you have right now?"
++     - Input: [qty]
++
++  - Button: "➕ Add to Inventory" (Style: Green, Wide).
++
++- SECTION D: INVENTORY LIST
++  - Render `inventory.map()` as Cards.
++  - Card Style: White background, shadow, padding 15px.
++  - Content:
++    - Bold Text: [product.name]
++    - Badge: If (price > competitorPrice) show "💎 PREMIUM". Else show "⚡ COMPETITIVE".
++    - Small Text: "Stock: [qty] | Net Profit: $[price - cost - adSpend]"
++
++--- VIEW 3: DETAIL VIEW ---
++- Header: "📈 Audit: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey, Full Width, Padding 12px).
++
++- PART 1: COMPETITIVE ANALYSIS
++  - Logic: If price < competitorPrice: Display "✅ MARKET ADVANTAGE: Undercutting rival by $[diff]."
++  - Logic: If price > competitorPrice: Display "💎 PREMIUM POSITION: Charging $[diff] premium."
++
++- PART 2: DATA LIST
++  1. "True Net Profit": $[price - cost - adSpend]
++  2. "Contribution Margin": $[price - cost]
++  3. "Markup %": [((price - cost) / cost) * 100]%
++  4. "Break-Even Volume": [Math.ceil((cost + adSpend) / (price - (cost + adSpend)))] units
++
++- PART 3: DELETE
++  - Button: "🗑️ Delete Product" (Style: Red).
+
+# 2025-11-28 10:01:26.790641
++Create a Mini App called "The Savage CFO: Ultimate Stable".
++
++CODE STRUCTURE RULES (CRITICAL):
++1. Define all `interfaces` (Product, State) at the VERY TOP of the file, outside the main function.
++2. Do not use Markdown backticks (```) inside the code block.
++3. Use standard `export default function App()`.
++
++UI RULES (Typable Inputs):
++1. Use standard HTML `<input type="number">`.
++2. Apply this INLINE STYLE to all inputs: `appearance: none; -webkit-appearance: none; margin: 0; width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;`. (This hides the arrows and makes them clickable).
++3. Container: `max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif;`.
++
++State Management:
++- Use `useState` for: `inventory`, `companyName`, `currentView`, `selectedProduct`.
++
++--- VIEW 1: MISSION BRIEFING (Full Description) ---
++- Title: "💼 The Business Auditor"
++- Description: "I am your personal Business Auditor. I will analyze your inventory, calculate your true ROI, roast your bad decisions, and help you find hidden profits. Enter your Company Name to begin the audit."
++- Input: Company Name.
++- Button: "Open Dashboard" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: DASHBOARD ---
++- Header: "📊 [CompanyName] Report Card"
++
++- SECTION A: THE GRADING SYSTEM
++  *Render a horizontal Card with a thick border.*
++  - Calculate `Efficiency` = (TotalProfit / TotalRevenue) * 100.
++  - Logic:
++    - If Efficiency > 40: Grade = "A+ (Legendary)"
++    - If Efficiency > 20: Grade = "B (Solid)"
++    - If Efficiency > 0: Grade = "C (Surviving)"
++    - Else: Grade = "F (Bankrupt)"
++  - Display:
++    - Left: "Total Profit: $[Sum Net Profit]"
++    - Right: Big Text Badge "[Grade]"
++
++- SECTION B: EXECUTIVE SUMMARY (Grid)
++  1. "Capital Risk": $[Sum of (cost + adSpend) * qty]
++  2. "Projected Profit": $[Sum of (price - cost - adSpend) * qty]
++  3. "Total Inventory": [Sum of qty] units
++
++- SECTION C: ADD PRODUCT (With Explanations)
++  *Render each input exactly like this:*
++  
++  1. Label: "PRODUCT NAME" (Bold)
++     - Helper Text: "What is the name of the item?" (Small Grey)
++     - Input: [name]
++
++  2. Label: "UNIT COST ($)"
++     - Helper Text: "Cost to make or buy ONE single item?"
++     - Input: [cost]
++
++  3. Label: "AD SPEND ($)"
++     - Helper Text: "Estimated advertising cost per sale?"
++     - Input: [adSpend]
++
++  4. Label: "SELLING PRICE ($)"
++     - Helper Text: "What does the customer pay you?"
++     - Input: [price]
++
++  5. Label: "COMPETITOR PRICE ($)"
++     - Helper Text: "What does your rival charge?"
++     - Input: [competitorPrice]
++
++  6. Label: "STOCK QTY"
++     - Helper Text: "How many units do you have right now?"
++     - Input: [qty]
++
++  - Button: "➕ Add to Inventory" (Style: Green, Wide).
++
++- SECTION D: INVENTORY LIST
++  - Render `inventory.map()` as Cards.
++  - Card Style: White background, shadow, padding 15px.
++  - Content:
++    - Bold Text: [product.name]
++    - Badge: If (price > competitorPrice) show "💎 PREMIUM". Else show "⚡ COMPETITIVE".
++    - Small Text: "Stock: [qty] | Net Profit: $[price - cost - adSpend]"
++
++--- VIEW 3: DETAIL VIEW ---
++- Header: "📈 Audit: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey, Full Width, Padding 12px).
++
++- PART 1: COMPETITIVE ANALYSIS
++  - Logic: If price < competitorPrice: Display "✅ MARKET ADVANTAGE: Undercutting rival by $[diff]."
++  - Logic: If price > competitorPrice: Display "💎 PREMIUM POSITION: Charging $[diff] premium."
++
++- PART 2: DATA LIST
++  1. "True Net Profit": $[price - cost - adSpend]
++  2. "Contribution Margin": $[price - cost]
++  3. "Markup %": [((price - cost) / cost) * 100]%
++  4. "Break-Even Volume": [Math.ceil((cost + adSpend) / (price - (cost + adSpend)))] units
++
++- PART 3: DELETE
++  - Button: "🗑️ Delete Product" (Style: Red).
