@@ -4660,3 +4660,209 @@
 +
 +- PART 3: ACTIONS
 +  - Button: "🗑️ Delete Product" (Style: Red).
+
+# 2025-12-03 02:35:07.847926
++Create a Mini App called "The Savage CFO: Clean Slate".
++
++CRITICAL FILE STRUCTURE RULES (To fix Build Error):
++1. START THE FILE IMMEDIATELY WITH `"use client";`.
++2. PLACE ALL IMPORTS (`import { useState }...`) IMMEDIATELY AFTER.
++3. Define `interface Product` and `interface State` NEXT.
++4. Then define `export default function App()`.
++5. DO NOT output the code twice. DO NOT put imports in the middle of the file.
++
++UI RULES (Typable Inputs):
++1. INPUTS: Use standard HTML `<input type="number">`.
++2. CSS: Apply this inline style to ALL inputs: `appearance: none; -webkit-appearance: none; margin: 0; width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; background: #ffffff; font-size: 16px;`.
++3. CONTAINER: `max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif;`.
++
++State Management:
++- `inventory` (Array<Product>), `companyName` (String), `currentView` (String), `selectedProduct` (Product | null).
++
++--- VIEW 1: MISSION BRIEFING ---
++- Title: "💼 The Business Auditor"
++- Description: "I am your personal Business Auditor. I will analyze your inventory, calculate your true ROI, roast your bad decisions, and help you find hidden profits. Most businesses fail because they don't know their numbers. Enter your Company Name to begin the audit."
++- Input: Company Name.
++- Button: "Open Dashboard" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: DASHBOARD ---
++- Header: "📊 [CompanyName] Report Card"
++
++- SECTION A: GLOBAL STATS
++  *Render a simple 2-column grid.*
++  1. Box: "Total Items" -> [Sum of Qty]
++  2. Box: "Capital Invested" -> $[Sum of (Cost + AdSpend) * Qty]
++
++- SECTION B: ADD PRODUCT (With Descriptions)
++  *Render inputs with helper text ABOVE each input.*
++
++  1. Label: "PRODUCT NAME"
++     - Desc: "What is the item name?"
++     - Input: [name] (Type: Text)
++
++  2. Label: "UNIT COST"
++     - Desc: "Cost to make/buy ONE item?"
++     - Input: [cost] (Type: Number)
++
++  3. Label: "AD SPEND"
++     - Desc: "Marketing cost per item?"
++     - Input: [adSpend] (Type: Number)
++
++  4. Label: "SELLING PRICE"
++     - Desc: "Final price the customer pays?"
++     - Input: [price] (Type: Number)
++
++  5. Label: "COMPETITOR PRICE"
++     - Desc: "What does your rival charge?"
++     - Input: [competitorPrice] (Type: Number)
++
++  6. Label: "STOCK QTY"
++     - Desc: "How many units do you have?"
++     - Input: [qty] (Type: Number)
++
++  - Button: "➕ Add to Inventory" (Style: Green Background, White Text).
++
++- SECTION C: INVENTORY LIST
++  - Render `inventory` array.
++  - Design: White Card, Shadow.
++  - Content:
++    - "[Product Name]" (Bold)
++    - Badge: If Price > CompetitorPrice "💎 PREMIUM". Else "⚡ COMPETITIVE".
++    - "Stock: [Qty] | Net Profit: $[Price - Cost - Ads]"
++  - Action: Click to set `selectedProduct` and view detail.
++
++--- VIEW 3: DETAIL VIEW (Market Strategy Logic) ---
++- Header: "📈 Analysis: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey, Full Width).
++
++- PART 1: STRATEGIC POSITIONING
++  *Calculate `Margin` = (Price > 0) ? ((Price - Cost - Ads) / Price * 100) : 0.*
++  *Render Logic Block:*
++
++  1. IF (Price < CompetitorPrice) AND (Margin > 20):
++     "🏆 STRATEGY: SMART DISRUPTION"
++     "Verdict: You are cheaper than your rival BUT you still make high profit. You will destroy them."
++
++  2. IF (Price <= CompetitorPrice) AND (Margin <= 20):
++     "⚠️ STRATEGY: RACE TO THE BOTTOM"
++     "Verdict: You are undercutting the rival, but your profit is too thin. One bad month will bankrupt you."
++
++  3. IF (Price > CompetitorPrice) AND (Margin > 30):
++     "💎 STRATEGY: LUXURY BRANDING"
++     "Verdict: You are expensive, but your margins prove you have a premium product. Keep quality high."
++
++  4. ELSE:
++     "💀 STRATEGY: DEAD ON ARRIVAL"
++     "Verdict: You are more expensive than the rival AND you make less money. You are inefficient. Fix costs immediately."
++
++- PART 2: THE NUMBERS
++  1. "True Net Profit": $[Price - Cost - Ads]
++  2. "Contribution Margin": $[Price - Cost]
++  3. "Competitor Variance": $[Price - CompetitorPrice]
++
++- PART 3: ACTIONS
++  - Button: "🗑️ Delete Product" (Style: Red).
++
+
+# 2025-12-03 02:35:07.848679
++Create a Mini App called "The Savage CFO: Clean Slate".
++
++CRITICAL FILE STRUCTURE RULES (To fix Build Error):
++1. START THE FILE IMMEDIATELY WITH `"use client";`.
++2. PLACE ALL IMPORTS (`import { useState }...`) IMMEDIATELY AFTER.
++3. Define `interface Product` and `interface State` NEXT.
++4. Then define `export default function App()`.
++5. DO NOT output the code twice. DO NOT put imports in the middle of the file.
++
++UI RULES (Typable Inputs):
++1. INPUTS: Use standard HTML `<input type="number">`.
++2. CSS: Apply this inline style to ALL inputs: `appearance: none; -webkit-appearance: none; margin: 0; width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; background: #ffffff; font-size: 16px;`.
++3. CONTAINER: `max-width: 600px; margin: 0 auto; padding: 20px; font-family: sans-serif;`.
++
++State Management:
++- `inventory` (Array<Product>), `companyName` (String), `currentView` (String), `selectedProduct` (Product | null).
++
++--- VIEW 1: MISSION BRIEFING ---
++- Title: "💼 The Business Auditor"
++- Description: "I am your personal Business Auditor. I will analyze your inventory, calculate your true ROI, roast your bad decisions, and help you find hidden profits. Most businesses fail because they don't know their numbers. Enter your Company Name to begin the audit."
++- Input: Company Name.
++- Button: "Open Dashboard" (Style: Wide, Black Background, White Text).
++
++--- VIEW 2: DASHBOARD ---
++- Header: "📊 [CompanyName] Report Card"
++
++- SECTION A: GLOBAL STATS
++  *Render a simple 2-column grid.*
++  1. Box: "Total Items" -> [Sum of Qty]
++  2. Box: "Capital Invested" -> $[Sum of (Cost + AdSpend) * Qty]
++
++- SECTION B: ADD PRODUCT (With Descriptions)
++  *Render inputs with helper text ABOVE each input.*
++
++  1. Label: "PRODUCT NAME"
++     - Desc: "What is the item name?"
++     - Input: [name] (Type: Text)
++
++  2. Label: "UNIT COST"
++     - Desc: "Cost to make/buy ONE item?"
++     - Input: [cost] (Type: Number)
++
++  3. Label: "AD SPEND"
++     - Desc: "Marketing cost per item?"
++     - Input: [adSpend] (Type: Number)
++
++  4. Label: "SELLING PRICE"
++     - Desc: "Final price the customer pays?"
++     - Input: [price] (Type: Number)
++
++  5. Label: "COMPETITOR PRICE"
++     - Desc: "What does your rival charge?"
++     - Input: [competitorPrice] (Type: Number)
++
++  6. Label: "STOCK QTY"
++     - Desc: "How many units do you have?"
++     - Input: [qty] (Type: Number)
++
++  - Button: "➕ Add to Inventory" (Style: Green Background, White Text).
++
++- SECTION C: INVENTORY LIST
++  - Render `inventory` array.
++  - Design: White Card, Shadow.
++  - Content:
++    - "[Product Name]" (Bold)
++    - Badge: If Price > CompetitorPrice "💎 PREMIUM". Else "⚡ COMPETITIVE".
++    - "Stock: [Qty] | Net Profit: $[Price - Cost - Ads]"
++  - Action: Click to set `selectedProduct` and view detail.
++
++--- VIEW 3: DETAIL VIEW (Market Strategy Logic) ---
++- Header: "📈 Analysis: [selectedProduct.name]"
++- Button: "⬅️ Back to Dashboard" (Style: Dark Grey, Full Width).
++
++- PART 1: STRATEGIC POSITIONING
++  *Calculate `Margin` = (Price > 0) ? ((Price - Cost - Ads) / Price * 100) : 0.*
++  *Render Logic Block:*
++
++  1. IF (Price < CompetitorPrice) AND (Margin > 20):
++     "🏆 STRATEGY: SMART DISRUPTION"
++     "Verdict: You are cheaper than your rival BUT you still make high profit. You will destroy them."
++
++  2. IF (Price <= CompetitorPrice) AND (Margin <= 20):
++     "⚠️ STRATEGY: RACE TO THE BOTTOM"
++     "Verdict: You are undercutting the rival, but your profit is too thin. One bad month will bankrupt you."
++
++  3. IF (Price > CompetitorPrice) AND (Margin > 30):
++     "💎 STRATEGY: LUXURY BRANDING"
++     "Verdict: You are expensive, but your margins prove you have a premium product. Keep quality high."
++
++  4. ELSE:
++     "💀 STRATEGY: DEAD ON ARRIVAL"
++     "Verdict: You are more expensive than the rival AND you make less money. You are inefficient. Fix costs immediately."
++
++- PART 2: THE NUMBERS
++  1. "True Net Profit": $[Price - Cost - Ads]
++  2. "Contribution Margin": $[Price - Cost]
++  3. "Competitor Variance": $[Price - CompetitorPrice]
++
++- PART 3: ACTIONS
++  - Button: "🗑️ Delete Product" (Style: Red).
++
