@@ -690,6 +690,7 @@ export default function App() {
     </div>
   );
 }
+"use client";
 import { useState } from "react";
 
 interface Product {
